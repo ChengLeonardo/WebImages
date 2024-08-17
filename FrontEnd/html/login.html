@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/svg.css">
+    <link rel="stylesheet" href="../css/tailwindnt.css">
+    <title>Login</title>
+</head>
+<body id="body" class="h-screen w-full flex justify-center">
+    <section class="h-full w-5/12 flex justify-center items-center">
+        <div class="flex flex-col items-center h-4/5 w-full text-xl font-bold text-white rounded-3xl text-center bg-white/60">
+            <h1 class="mt-8 text-4xl font-bold">Inicio Sesion</h1>
+            <p class="mt-4 px-10">Ingresa tus datos para poder</p>
+            <p class="opacity-1">ingresar a tu cuenta</p>
+            <form class="w-4/6 mt-4 flex justify-center items-center flex-col" method="post">
+                <p>Username</p>
+                <!--Input de usuario-->
+                <div class="w-full relative">
+                    <label for="username"></label>
+                    <input class="pl-8 text-gris w-full h-12 rounded-full bg-white outline-none" name="username" type="text" required >
+                    <svg class="absolute pr-2" id="usuario" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.71 170.52">
+                        <circle class="cls-1" cx="62.86" cy="40.81" r="37.31"/>
+                        <path class="cls-1" d="M62.86,166.97s49.73,2.37,59.26-26.52c2.93-63.17-59.26-62.32-59.26-62.32,0,0-62.18-.84-59.26,62.32,9.52,28.89,59.26,26.52,59.26,26.52Z"/>
+                    </svg>
+                </div>
+                <!--Input de usuario-->
+                <p class="mt-2">Contraseña</p>
+                <div class="w-full relative">
+                    <label for="password"></label>
+                    <input class="pl-8 text-gris w-full h-12 rounded-full bg-white outline-none" name="password" type="text" required >
+                    <svg class="absolute pr-2" id="usuario" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.71 170.52">
+                        <circle class="cls-1" cx="62.86" cy="40.81" r="37.31"/>
+                        <path class="cls-1" d="M62.86,166.97s49.73,2.37,59.26-26.52c2.93-63.17-59.26-62.32-59.26-62.32,0,0-62.18-.84-59.26,62.32,9.52,28.89,59.26,26.52,59.26,26.52Z"/>
+                    </svg>
+                </div>
+                <div class="w-5/6 mt-2 flex justify-between">
+                    <p class="text-sm">recordar</p>
+                    <p class="text-sm">olvidaste tu contraeña</p>
+                </div>
+                <button class="mt-4 py-2 px-4 rounded-full mb-4 text-white bg-azul h-10 w-44 flex items-center justify-center">Iniciar sesion</button>
+            </form>
+            <a href="register.html" class="justify-center items-center flex w-44 text-azul bg-white px-4 py-2 rounded-full">Registrate</a>
+        </div>
+    </section>
+</body>
+</html>

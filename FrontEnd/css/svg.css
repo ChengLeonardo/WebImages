@@ -1,0 +1,12 @@
+#usuario{
+    height: 20px;
+    width: 25px;
+    top: 15px;
+    left: 10px;
+}
+
+#usuario .cls-1{
+    fill: #D7D9DE;
+    height: auto;
+    width: auto;
+}
