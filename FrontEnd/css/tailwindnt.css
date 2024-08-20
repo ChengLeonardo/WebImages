@@ -15,4 +15,7 @@
     z-index: -1;
     top: 0;
     left: 0;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
 }
