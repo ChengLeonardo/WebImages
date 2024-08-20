@@ -29,12 +29,11 @@ public class LoginController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 
-    [HttpPost]
     public IActionResult Register()
     {
     // Lógica para manejar el registro
     // Luego redirige a la página deseada
-        return RedirectToAction("Index", "RegisterController");
+        return RedirectToAction("Index", "Register");
     }
 
 }

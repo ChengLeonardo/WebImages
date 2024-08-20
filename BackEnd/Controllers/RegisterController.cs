@@ -22,6 +22,10 @@ public class RegisterController : Controller
     {
         return View();
     }
+    public IActionResult Login()
+    {
+        return RedirectToAction("Index", "Login");
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
