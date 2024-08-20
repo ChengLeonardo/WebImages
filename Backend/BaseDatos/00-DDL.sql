@@ -35,14 +35,13 @@ CREATE TABLE Post (
 CREATE TABLE UsuarioLikes (
     IdUsuario INT UNSIGNED,
     IdPost INT UNSIGNED,
-    FechaLike DATE NOT NULL,
     PRIMARY KEY (IdUsuario, IdPost),
     FOREIGN KEY (IdUsuario) REFERENCES Usuario(IdUsuario),
     FOREIGN KEY (IdPost) REFERENCES Post(IdPost)
 );
 
 -- Tabla Seguidores
-CREATE TABLE Seguidores (
+CREATE TABLE Seguidor (
     IdUsuario INT UNSIGNED,
     IdUsuarioSeguido INT UNSIGNED,
     FechaSeguimiento DATE NOT NULL,

@@ -9,39 +9,43 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BackEnd
 build_property.RootNamespace = BackEnd
-build_property.ProjectDir = C:\Users\Lab15-PC01\Documents\GitHub\WebImages\Backend\
+build_property.ProjectDir = /mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Lab15-PC01\Documents\GitHub\WebImages\Backend
+build_property.MSBuildProjectDirectory = /mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Lab15-PC01/Documents/GitHub/WebImages/Backend/Views/Login/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+[/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/css/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdC9jc3MvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lab15-PC01/Documents/GitHub/WebImages/Backend/Views/Register/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
+[/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lab15-PC01/Documents/GitHub/WebImages/Backend/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/Views/Register/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVnaXN0ZXIvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lab15-PC01/Documents/GitHub/WebImages/Backend/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lab15-PC01/Documents/GitHub/WebImages/Backend/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lab15-PC01/Documents/GitHub/WebImages/Backend/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lab15-PC01/Documents/GitHub/WebImages/Backend/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-ntp181vva5
+[/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-i1k0gimt9r

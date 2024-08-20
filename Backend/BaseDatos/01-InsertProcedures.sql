@@ -34,12 +34,11 @@ END //
 -- Stored Procedure para insertar en la tabla UsuarioLikes
 CREATE PROCEDURE InsertUsuarioLikes(
     IN p_IdUsuario INT UNSIGNED,
-    IN p_IdPost INT UNSIGNED,
-    IN p_FechaLike DATE
+    IN p_IdPost INT UNSIGNED
 )
 BEGIN
-    INSERT INTO UsuarioLikes (IdUsuario, IdPost, FechaLike)
-    VALUES (p_IdUsuario, p_IdPost, p_FechaLike);
+    INSERT INTO UsuarioLikes (IdUsuario, IdPost)
+    VALUES (p_IdUsuario, p_IdPost);
 END //
 
 -- Stored Procedure para insertar en la tabla Seguidores
@@ -49,7 +48,7 @@ CREATE PROCEDURE InsertSeguidores(
     IN p_FechaSeguimiento DATE
 )
 BEGIN
-    INSERT INTO Seguidores (IdUsuario, IdUsuarioSeguido, FechaSeguimiento)
+    INSERT INTO Seguidor (IdUsuario, IdUsuarioSeguido, FechaSeguimiento)
     VALUES (p_IdUsuario, p_IdUsuarioSeguido, p_FechaSeguimiento);
 END //
 

@@ -1,331 +1,331 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BackEnd.bundle.scp.css",
-      "PackagePath": "staticwebassets\\BackEnd.bundle.scp.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/obj/Debug/net8.0/scopedcss/projectbundle/BackEnd.bundle.scp.css",
+      "PackagePath": "staticwebassets/BackEnd.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\Fondito.jpeg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\Fondito.jpeg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/Fondito.jpeg",
+      "PackagePath": "staticwebassets/Imagenens-layout/Fondito.jpeg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\LOGIN.png",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\LOGIN.png"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/LOGIN.png",
+      "PackagePath": "staticwebassets/Imagenens-layout/LOGIN.png"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\REGISTER DOS.png",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\REGISTER DOS.png"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/REGISTER DOS.png",
+      "PackagePath": "staticwebassets/Imagenens-layout/REGISTER DOS.png"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\REGISTER UNO.png",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\REGISTER UNO.png"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/REGISTER UNO.png",
+      "PackagePath": "staticwebassets/Imagenens-layout/REGISTER UNO.png"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\colores.png",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\colores.png"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/colores.png",
+      "PackagePath": "staticwebassets/Imagenens-layout/colores.png"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\svg\\1candado de privaciadad abierto.svg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\svg\\1candado de privaciadad abierto.svg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/svg/1candado de privaciadad abierto.svg",
+      "PackagePath": "staticwebassets/Imagenens-layout/svg/1candado de privaciadad abierto.svg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\svg\\1candado de privaciadad.svg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\svg\\1candado de privaciadad.svg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/svg/1candado de privaciadad.svg",
+      "PackagePath": "staticwebassets/Imagenens-layout/svg/1candado de privaciadad.svg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\svg\\Usuario-Icono.svg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\svg\\Usuario-Icono.svg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/svg/Usuario-Icono.svg",
+      "PackagePath": "staticwebassets/Imagenens-layout/svg/Usuario-Icono.svg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\svg\\correo.svg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\svg\\correo.svg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/svg/correo.svg",
+      "PackagePath": "staticwebassets/Imagenens-layout/svg/correo.svg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\svg\\idealoo.svg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\svg\\idealoo.svg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/svg/idealoo.svg",
+      "PackagePath": "staticwebassets/Imagenens-layout/svg/idealoo.svg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\svg\\imagen-login.svg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\svg\\imagen-login.svg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/svg/imagen-login.svg",
+      "PackagePath": "staticwebassets/Imagenens-layout/svg/imagen-login.svg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\svg\\imagen-login2.svg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\svg\\imagen-login2.svg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/svg/imagen-login2.svg",
+      "PackagePath": "staticwebassets/Imagenens-layout/svg/imagen-login2.svg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\svg\\puntos.svg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\svg\\puntos.svg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/svg/puntos.svg",
+      "PackagePath": "staticwebassets/Imagenens-layout/svg/puntos.svg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\Imagenens-layout\\svg\\telefono.svg",
-      "PackagePath": "staticwebassets\\Imagenens-layout\\svg\\telefono.svg"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/Imagenens-layout/svg/telefono.svg",
+      "PackagePath": "staticwebassets/Imagenens-layout/svg/telefono.svg"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\css\\input.css",
-      "PackagePath": "staticwebassets\\css\\input.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/css/input.css",
+      "PackagePath": "staticwebassets/css/input.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\css\\output.css",
-      "PackagePath": "staticwebassets\\css\\output.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/css/output.css",
+      "PackagePath": "staticwebassets/css/output.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\css\\svg.css",
-      "PackagePath": "staticwebassets\\css\\svg.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/css/svg.css",
+      "PackagePath": "staticwebassets/css/svg.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\css\\tailwindnt.css",
-      "PackagePath": "staticwebassets\\css\\tailwindnt.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/css/tailwindnt.css",
+      "PackagePath": "staticwebassets/css/tailwindnt.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\WebImages\\Backend\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BackEnd.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BackEnd.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BackEnd.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BackEnd.props",
       "PackagePath": "build\\BackEnd.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BackEnd.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BackEnd.props",
       "PackagePath": "buildMultiTargeting\\BackEnd.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BackEnd.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BackEnd.props",
       "PackagePath": "buildTransitive\\BackEnd.props"
     }
   ],
