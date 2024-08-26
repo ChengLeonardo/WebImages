@@ -1,3 +1,4 @@
+drop DATABASE if EXISTS MiPaginaDeImagenes;
 -- Crear la base de datos
 CREATE DATABASE IF NOT EXISTS MiPaginaDeImagenes;
 USE MiPaginaDeImagenes;

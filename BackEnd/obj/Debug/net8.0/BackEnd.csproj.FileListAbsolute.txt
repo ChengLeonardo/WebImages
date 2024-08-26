@@ -98,3 +98,9 @@ C:/Users/Lab15-PC01/Documents/GitHub/WebImages/Backend/obj/Debug/net8.0/ref/Back
 /mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/obj/Debug/net8.0/BackEnd.genruntimeconfig.cache
 /mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/obj/Debug/net8.0/ref/BackEnd.dll
 /mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/obj/Debug/net8.0/BackEnd.csproj.AssemblyReference.cache
+/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/bin/Debug/net8.0/MySqlConnector.dll
+/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/obj/Debug/net8.0/BackEnd.csproj.CopyComplete

@@ -35,7 +35,6 @@ public class RepoBase<T, N> : IRepoBase<T, N> where T : class
         return (N)keyProperty;
     }
 
-
     public List<T> Select()
     {
         return _dbSet.ToList();
