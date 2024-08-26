@@ -1,7 +1,7 @@
-drop DATABASE if EXISTS MiPaginaDeImagenes;
+drop DATABASE if EXISTS 5to_MiPaginaDeImagenes;
 -- Crear la base de datos
-CREATE DATABASE IF NOT EXISTS MiPaginaDeImagenes;
-USE MiPaginaDeImagenes;
+CREATE DATABASE IF NOT EXISTS 5to_MiPaginaDeImagenes;
+USE 5to_MiPaginaDeImagenes;
 
 -- Tabla RolUsuario
 CREATE TABLE RolUsuario (

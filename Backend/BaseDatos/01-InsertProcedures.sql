@@ -1,3 +1,4 @@
+Use 5to_MiPaginaDeImagenes
 DELIMITER //
 
 -- Stored Procedure para insertar en la tabla Usuario

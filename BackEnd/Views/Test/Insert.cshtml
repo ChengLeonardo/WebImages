@@ -1,5 +1,5 @@
-@model List<BackEnd.Models.RolUsuario>;
-@* <form action="/Test/InsertRol" method="post">
+@model BackEnd.Models.RolUsuario;
+<form action="/Test/InsertRol" method="post">
     <div class="w-4/5 relative">
         <label for="Descripcion"></label>
         <input class="form-control"asp-for="Descripcion"type="text" required >
@@ -16,29 +16,4 @@
             <path class="cls-1" d="M62.86,166.97s49.73,2.37,59.26-26.52c2.93-63.17-59.26-62.32-59.26-62.32,0,0-62.18-.84-59.26,62.32,9.52,28.89,59.26,26.52,59.26,26.52Z"/>
         </svg>
     </div>
-</form> *@
-
-<div class = "row">
-    <div class="col-sm-8 offset-sm-2">
-        <h2>lista de rol usuarios
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>IdRol</th>
-                    <th>Descripcion</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach(var item in Model)
-                {
-                    <tr>
-                        <td>@item.IdRol</td>
-                        <td>@item.Descripcion</td>
-                    </tr>
-                        
-                }
-            </tbody> 
-        </table>
-        </h2>
-    </div>
-</div>
+</form> 

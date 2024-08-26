@@ -5,11 +5,11 @@ namespace BackEnd.Models;
 
 public class MyDbContext : DbContext
 {
-    public DbSet<Usuario> Usuarios { get; set; }
-    public DbSet<Post> Posts { get; set; }
-    public DbSet<UsuarioLikes> UsuarioLikes { get; set; }
-    public DbSet<Seguidor> Seguidores { get; set; }
-    public DbSet<RolUsuario> RolUsuarios { get; set; }
+    public DbSet<Usuario> Usuario { get; set; }
+    public DbSet<Post> Post { get; set; }
+    public DbSet<UsuarioLikes> UsuarioLike { get; set; }
+    public DbSet<Seguidor> Seguidore { get; set; }
+    public DbSet<RolUsuario> RolUsuario { get; set; }
 
     public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
     {

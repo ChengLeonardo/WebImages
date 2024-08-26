@@ -4,7 +4,7 @@ namespace BackEnd.Models;
 
 public class RepoRolUsuario : RepoBase<RolUsuario, uint>
 {
-    public RepoRolUsuario(MyDbContext context, DbSet<RolUsuario> dbSet) : base(context, dbSet)
+    public RepoRolUsuario(MyDbContext context) : base(context, context.Set<RolUsuario>())
     {
     }
 }

@@ -1,19 +1,31 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using BackEnd.Models;
+using System.CodeDom.Compiler;
 
 namespace BackEnd.Controllers;
 
 public class TestController : Controller
 {
-    private readonly ILogger<TestController> _logger;
+    private readonly RepoRolUsuario _repoRolUsuario;
 
-    public TestController(ILogger<TestController> logger)
+    public TestController(RepoRolUsuario repoRolUsuario)
     {
-        _logger = logger;
+        _repoRolUsuario = repoRolUsuario;
     }
 
     public IActionResult Index()
+    {
+        List<RolUsuario> rolUsuarios = _repoRolUsuario.Select();
+        return View(rolUsuarios);
+    }
+    [HttpGet]
+    public async Task<IActionResult> Insert()
+    {
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Insert()
     {
         return View();
     }
@@ -21,10 +33,6 @@ public class TestController : Controller
     public IActionResult Privacy()
     {
         return View();
-    }
-    public IActionResult Login()
-    {
-        return RedirectToAction("Index", "Login");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

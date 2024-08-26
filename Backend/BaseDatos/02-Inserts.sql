@@ -1,4 +1,4 @@
-USE MiPaginaDeImagenes;
+USE 5to_MiPaginaDeImagenes;
 
 CALL InsertRolUsuario("Usuario Comun", @RolComun);
 CALL InsertRolUsuario("Usuario Administrador", @RolAdmin);
