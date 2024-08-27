@@ -20,13 +20,37 @@ public class TestController : Controller
         return View(rolUsuarios);
     }
     [HttpGet]
-    public async Task<IActionResult> Insert()
+    public IActionResult Insert()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Insert(RolUsuario rolUsuario)
+    {
+        _repoRolUsuario.Insert(rolUsuario, "IdRol");
+        return View();
+    }
+    [HttpGet]
+    public IActionResult Delete()
     {
         return View();
     }
     [HttpPost]
-    public IActionResult Insert()
+    public IActionResult Delete(RolUsuario rolUsuario)
     {
+        _repoRolUsuario.Delete(rolUsuario);
+        return View();
+    }
+    [HttpGet]
+    public IActionResult Update()
+    {
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Update(RolUsuario rolUsuario)
+    {
+        _repoRolUsuario.Update(rolUsuario);
         return View();
     }
 
