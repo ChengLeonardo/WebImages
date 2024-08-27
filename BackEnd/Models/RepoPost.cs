@@ -4,7 +4,7 @@ namespace BackEnd.Models;
 
 public class RepoPost : RepoBase<Post, uint>
 {
-    public RepoPost(MyDbContext context, DbSet<Post> dbSet) : base(context, dbSet)
+    public RepoPost(MyDbContext context) : base(context, context.Set<Post>())
     {
     }
 }
