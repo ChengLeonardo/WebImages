@@ -3,14 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using BackEnd.Models;
 using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using BackEnd.Interface;
 
 namespace BackEnd.Controllers;
 
 public class LoginController : Controller
 {
-    private readonly RepoUsuario _repoUsuario;
+    private readonly IRepoUsuario _repoUsuario;
 
-    public LoginController(RepoUsuario repoUsuario)
+    public LoginController(IRepoUsuario repoUsuario)
     {
         _repoUsuario = repoUsuario;
     }
@@ -24,17 +25,19 @@ public class LoginController : Controller
     {
         if(ModelState.IsValid)
         {
-            var existe = _repoUsuario.SelectWhere(u => u.NombreUsuario == usuario.NombreUsuario && u.Contrasena == usuario.Contrasena).FirstOrDefault();
+            var usuarioExistente = _repoUsuario.SelectWhere(u => u.NombreUsuario == usuario.NombreUsuario).FirstOrDefault();
 
-            if(existe != null)
+            if(usuarioExistente != null)
             {
-                return RedirectToAction("Index", "Home");
+                if(BCrypt.Net.BCrypt.Verify(usuario.Contrasena, usuarioExistente.Contrasena))
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
 
-            return
+            ModelState.AddModelError(string.Empty, "Nombre usuario o contrasena incorrecta.");
         }
         return View(usuario);
-
     }
 
     public IActionResult Register()

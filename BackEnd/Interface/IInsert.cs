@@ -1,4 +1,4 @@
-namespace BackEnd.Models;
+namespace BackEnd.Interface;
 
 public interface IInsert<T, N>
 {

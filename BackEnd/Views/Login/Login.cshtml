@@ -6,6 +6,7 @@
                 <p class="opacity-1">ingresar a tu cuenta</p>
             </div>
             <form asp-action="Login" asp-controller="Login" class="w-4/6 mt-4 flex justify-center items-center flex-col" method="post">
+                @Html.ValidationSummary(true)
                 <p class="mb-2">Nombre Usuario</p>
                 <!--Input de usuario-->
                 <div class="w-4/5 relative">

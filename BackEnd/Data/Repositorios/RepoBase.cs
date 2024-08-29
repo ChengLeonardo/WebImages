@@ -1,8 +1,9 @@
 using System.Linq.Expressions;
 using System.Numerics;
+using BackEnd.Interface;
 using Microsoft.EntityFrameworkCore;
 
-namespace BackEnd.Models;
+namespace BackEnd.Data.Repositorios;
 
 public class RepoBase<T, N> : IRepoBase<T, N> where T : class
 {

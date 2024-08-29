@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace BackEnd.Models;
+namespace BackEnd.Interface;
 
 public interface ISelectWhere<T>
 {

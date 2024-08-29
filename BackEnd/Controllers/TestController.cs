@@ -2,14 +2,16 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using BackEnd.Models;
 using System.CodeDom.Compiler;
+using BackEnd.Data.Repositorios;
+using BackEnd.Interface;
 
 namespace BackEnd.Controllers;
 
 public class TestController : Controller
 {
-    private readonly RepoRolUsuario _repoRolUsuario;
+    private readonly IRepoRolUsuario _repoRolUsuario;
 
-    public TestController(RepoRolUsuario repoRolUsuario)
+    public TestController(IRepoRolUsuario repoRolUsuario)
     {
         _repoRolUsuario = repoRolUsuario;
     }

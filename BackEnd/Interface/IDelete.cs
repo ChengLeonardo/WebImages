@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace BackEnd.Models;
+namespace BackEnd.Interface;
 
 public interface IDelete<T>
 {
