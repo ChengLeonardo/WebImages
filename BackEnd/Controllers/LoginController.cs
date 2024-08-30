@@ -15,21 +15,22 @@ public class LoginController : Controller
     {
         _repoUsuario = repoUsuario;
     }
+    
     [HttpGet]
     public IActionResult Login()
     {
         return View();
     }
     [HttpPost]
-    public IActionResult Login(Usuario usuario)
+    public IActionResult Login(LoginViewModel model)
     {
         if(ModelState.IsValid)
         {
-            var usuarioExistente = _repoUsuario.SelectWhere(u => u.NombreUsuario == usuario.NombreUsuario).FirstOrDefault();
+            var usuarioExistente = _repoUsuario.SelectWhere(u => u.NombreUsuario == model.NombreUsuario).FirstOrDefault();
 
             if(usuarioExistente != null)
             {
-                if(BCrypt.Net.BCrypt.Verify(usuario.Contrasena, usuarioExistente.Contrasena))
+                if(BCrypt.Net.BCrypt.Verify(model.Contrasena, usuarioExistente.Contrasena))
                 {
                     return RedirectToAction("Index", "Home");
                 }
@@ -37,7 +38,8 @@ public class LoginController : Controller
 
             ModelState.AddModelError(string.Empty, "Nombre usuario o contrasena incorrecta.");
         }
-        return View(usuario);
+
+        return View(model);
     }
 
     public IActionResult Register()

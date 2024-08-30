@@ -16,7 +16,7 @@ public class Usuario
     [Required]
     [StringLength(255)]
     public string NombreUsuario { get; set; }
-
+    
     [StringLength(255)]
     public string Contrasena { get; set; }
 
