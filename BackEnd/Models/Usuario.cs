@@ -26,7 +26,7 @@ public class Usuario
     [StringLength(255)]
     public string? FotoPerfil { get; set; } // URL de la imagen de perfil
 
-    public uint? IdRol { get; set; }
+    public uint IdRol { get; set; }
 
     [ForeignKey("IdRol")]
     public RolUsuario? Rol { get; set; }

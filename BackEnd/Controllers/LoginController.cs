@@ -4,16 +4,21 @@ using BackEnd.Models;
 using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using BackEnd.Interface;
+using System.Security.Claims;
+using BackEnd.Data.Repositorios;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace BackEnd.Controllers;
 
 public class LoginController : Controller
 {
     private readonly IRepoUsuario _repoUsuario;
+    private readonly IRepoRolUsuario _repoRolUsuario;
 
-    public LoginController(IRepoUsuario repoUsuario)
+    public LoginController(IRepoUsuario repoUsuario, IRepoRolUsuario repoRolUsuario)
     {
         _repoUsuario = repoUsuario;
+        _repoRolUsuario = repoRolUsuario;
     }
     
     [HttpGet]
@@ -32,6 +37,19 @@ public class LoginController : Controller
             {
                 if(BCrypt.Net.BCrypt.Verify(model.Contrasena, usuarioExistente.Contrasena))
                 {
+                    var rol = _repoRolUsuario.IdSelect(usuarioExistente.IdRol);
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.NameIdentifier, usuarioExistente.IdUsuario.ToString()),
+                        new Claim(ClaimTypes.Name, usuarioExistente.NombreUsuario),
+                        new Claim(ClaimTypes.Email, usuarioExistente.Email),
+                        new Claim(ClaimTypes.Role, rol.Descripcion)
+                    };
+
+                    // Crear la identidad y el principal
+                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var principal = new ClaimsPrincipal(identity);
+                    
                     return RedirectToAction("Index", "Home");
                 }
             }
