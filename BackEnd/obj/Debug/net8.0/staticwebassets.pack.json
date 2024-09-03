@@ -309,6 +309,10 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/videos/a.MP3",
+      "PackagePath": "staticwebassets/videos/a.MP3"
+    },
+    {
       "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/videos/videoplayback.mp4",
       "PackagePath": "staticwebassets/videos/videoplayback.mp4"
     },

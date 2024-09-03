@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fU2KMCBH7SQMc57szVRYwkty8PC+IWZZhQ9oK1GSKp0=",
+  "Hash": "sBpVQpBA5V2oWNIGMWhNAyp0T9NfoqPr/EaHn967t3g=",
   "Source": "BackEnd",
   "BasePath": "_content/BackEnd",
   "Mode": "Default",
@@ -1497,6 +1497,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/videos/a.MP3",
+      "SourceId": "BackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/",
+      "BasePath": "_content/BackEnd",
+      "RelativePath": "videos/a.MP3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/videos/a.MP3"
     },
     {
       "Identity": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/videos/videoplayback.mp4",
