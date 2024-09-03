@@ -4,6 +4,7 @@ using BackEnd.Models;
 using BackEnd.Interface;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 
 namespace BackEnd.Controllers;
 
@@ -29,7 +30,7 @@ public class RegisterController : Controller
         if(ModelState.IsValid)
         {
             var nombreUsuarioExistente = _repoUsuario.SelectWhere(u => u.NombreUsuario == model.NombreUsuario);
-            if(nombreUsuarioExistente != null)
+            if(nombreUsuarioExistente.Any())
             {
                 ModelState.AddModelError("NombreUsuario", "El nombre usuario ya esta en uso. Por favor, elige otro.");
                 return View(model);
@@ -73,11 +74,11 @@ public class RegisterController : Controller
                 var usuario = new Usuario
                 {
                     Email = model.Email,
-                    Contrasena = model.Contrasena,
+                    Contrasena = BCrypt.Net.BCrypt.HashPassword(model.Contrasena),
                     Apellido = TempData["Apellido"].ToString(),
                     Nombre = TempData["Nombre"].ToString(),
                     NombreUsuario = TempData["NombreUsuario"].ToString(),
-                    FotoPerfil = null,
+                    FotoPerfil = "",
                     IdRol =  1,
                     IdUsuario = 0,
                     Rol = rol
@@ -114,7 +115,7 @@ public class RegisterController : Controller
     }
     public IActionResult Login()
     {
-        return RedirectToAction("Index", "Login");
+        return RedirectToAction("Login", "Login");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

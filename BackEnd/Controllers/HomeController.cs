@@ -20,7 +20,7 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Index()
     {
-        var 
+     
         return View();
     }
 

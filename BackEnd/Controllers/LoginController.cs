@@ -64,7 +64,7 @@ public class LoginController : Controller
     {
     // Lógica para manejar el registro
     // Luego redirige a la página deseada
-        return RedirectToAction("Index", "Register");
+        return RedirectToAction("Register_1", "Register");
     }
 
     public IActionResult Privacy()
