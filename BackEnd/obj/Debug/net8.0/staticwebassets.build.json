@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sBpVQpBA5V2oWNIGMWhNAyp0T9NfoqPr/EaHn967t3g=",
+  "Hash": "go/ljWv6MnXwdYH3nVkKrxaJzvEwgMEJzCDJ9k3VS00=",
   "Source": "BackEnd",
   "BasePath": "_content/BackEnd",
   "Mode": "Default",
@@ -1516,6 +1516,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/videos/a.MP3"
+    },
+    {
+      "Identity": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/videos/Rick Astley - Never Gonna Give You Up (video oficial) __ Español.mp4",
+      "SourceId": "BackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/",
+      "BasePath": "_content/BackEnd",
+      "RelativePath": "videos/Rick Astley - Never Gonna Give You Up (video oficial) __ Español.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/videos/Rick Astley - Never Gonna Give You Up (video oficial) __ Español.mp4"
     },
     {
       "Identity": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/videos/videoplayback.mp4",

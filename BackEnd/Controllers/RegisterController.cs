@@ -53,6 +53,11 @@ public class RegisterController : Controller
     [HttpGet]
     public IActionResult Register_2()
     {
+        if(TempData["Nombre"] == null)
+        {
+            throw new Exception("No se puede acceder a esta pagina");
+        }
+        TempData.Keep();
         return View();
     }
 

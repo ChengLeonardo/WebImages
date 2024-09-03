@@ -1,0 +1,166 @@
+ <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1; /* Mantén las chispas en el fondo */
+    }
+  </style>
+
+
+ <style>
+    #delayedElement{
+      transition: opacity 1s ease;
+    }
+      /* Estilo base para la imagen animada */
+    .slide-in {
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+      width: 200px; /* Ajusta según el tamaño de tu imagen */
+      height: auto;
+      transition: transform 2s ease-out;
+      z-index: 10; /* Asegúrate de que la imagen esté sobre otros elementos */
+    }
+    
+    /* Clase para la animación cuando se activa */
+    .slide-in.visible {
+      transform: translateX(100vw) translateY(-50%);
+    }
+    
+    /* Oculta la imagen después de la animación */
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+  <!-- Contenido de tu página -->
+  <main class="flex justify-center items-center h-screen bg-gray-100 flex-col">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTay9wS4lhD5OrmB6OG8JIx0U-niz0xRYKIQg&s" id="animatedImage" class="slide-in" alt="Imagen animada">
+    <div id="delayedElement" class="fade-in opacity-0 p-6 bg-blue-500 text-white">
+      <p class="text-4xl mb-8">Rickrolleado</p>
+    </div>
+    <iframe width="560" height="315" src="~/videos/Rick Astley - Never Gonna Give You Up (video oficial) __ Español.mp4" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </main>
+
+  <!-- Particles.js -->
+  <div id="particles-js"></div>
+
+  <!-- Incluye la librería Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  
+  <!-- Configuración de Particles.js -->
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        }
+      },
+      "retina_detect": true
+    });
+ // JavaScript para controlar la animación de la imagen
+    document.addEventListener("DOMContentLoaded", function() {
+      const animatedImage = document.getElementById('animatedImage');
+      
+      // Añadir la clase 'visible' después de un retraso para iniciar la animación
+      setTimeout(() => {
+        animatedImage.classList.add('visible');
+        
+        // Ocultar la imagen después de que la animación se complete
+        setTimeout(() => {
+          animatedImage.classList.add('hidden');
+        }, 2000); // La duración de la animación debe coincidir con el tiempo aquí
+      }, 500); // Retraso antes de iniciar la animación
+    });
+
+
+    // JavaScript para agregar la clase 'visible' después de un retraso
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(() => {
+        document.getElementById('delayedElement').classList.add('opacity');
+      }, 2000); // Retraso de 2000 milisegundos (2 segundos)
+    });
+  </script>
