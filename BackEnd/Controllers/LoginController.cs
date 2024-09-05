@@ -7,6 +7,7 @@ using BackEnd.Interface;
 using System.Security.Claims;
 using BackEnd.Data.Repositorios;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace BackEnd.Controllers;
 
@@ -24,10 +25,18 @@ public class LoginController : Controller
     [HttpGet]
     public IActionResult Login()
     {
-        return View();
+        
+        if (!User.Identity.IsAuthenticated)
+        {
+            return View();
+        }
+        else
+        {
+            return RedirectToAction("Index", "Home");
+        }
     }
     [HttpPost]
-    public IActionResult Login(LoginViewModel model)
+    public async Task<IActionResult> Login(LoginViewModel model)
     {
         if(ModelState.IsValid)
         {
@@ -50,6 +59,8 @@ public class LoginController : Controller
                     var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     var principal = new ClaimsPrincipal(identity);
                     
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
                     return RedirectToAction("Index", "Home");
                 }
             }

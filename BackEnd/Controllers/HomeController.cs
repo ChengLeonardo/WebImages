@@ -4,6 +4,7 @@ using BackEnd.Models;
 using BackEnd.Interface;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace BackEnd.Controllers;
 
@@ -20,17 +21,25 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Index()
     {
-     
-        return View();
+        if (User.Identity.IsAuthenticated)
+        {
+            return View();
+        }
+        else
+        {
+            return RedirectToAction("Login", "Login");
+        }
+    }
+    [HttpPost]
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return RedirectToAction("Login", "Login");
     }
 
     public IActionResult Privacy()
     {
         return View();
-    }
-    public IActionResult Login()
-    {
-        return RedirectToAction("Index", "Login");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

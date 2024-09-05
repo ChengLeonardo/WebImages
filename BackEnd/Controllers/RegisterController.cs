@@ -1,10 +1,11 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using BackEnd.Models;
 using BackEnd.Interface;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization.Infrastructure;
+using BackEnd.Models;
+using Microsoft.AspNetCore.Authentication;
 
 namespace BackEnd.Controllers;
 
@@ -21,6 +22,10 @@ public class RegisterController : Controller
     [HttpGet]
     public IActionResult Register_1()
     {
+        if(User.Identity.IsAuthenticated)
+        {
+            return RedirectToAction("Index", "Home");
+        }
         return View();
     }
 
@@ -53,16 +58,15 @@ public class RegisterController : Controller
     [HttpGet]
     public IActionResult Register_2()
     {
-        if(TempData["Nombre"] == null)
+        if(User.Identity.IsAuthenticated)
         {
-            throw new Exception("No se puede acceder a esta pagina");
+            return RedirectToAction("Index", "Home");
         }
-        TempData.Keep();
         return View();
     }
 
     [HttpPost]
-    public IActionResult Register_2(Register_2ViewModel model)
+    public async Task<IActionResult> Register_2(Register_2ViewModel model)
     {
         if (ModelState.IsValid)
         {
@@ -103,7 +107,8 @@ public class RegisterController : Controller
                 // Crear la identidad y el principal
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var principal = new ClaimsPrincipal(identity);
-                    
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);    
                 return RedirectToAction("Index", "Home");
             }
         }

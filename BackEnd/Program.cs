@@ -2,6 +2,7 @@ using BackEnd.Data;
 using BackEnd.Data.Repositorios;
 using BackEnd.Interface;
 using BackEnd.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
@@ -13,6 +14,13 @@ builder.Services.AddScoped<IRepoSeguidor, RepoSeguidor>();
 builder.Services.AddScoped<IRepoPost, RepoPost>();
 builder.Services.AddScoped<IRepoUsuarioLikes, RepoUsuarioLikes>();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+        .AddCookie(options =>
+        {
+            options.LoginPath = "/Login/Login"; // Ruta a la página de inicio de sesión
+            options.LogoutPath = "/Home/Logout"; // Ruta a la acción de cierre de sesión
+        });
+
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -38,7 +46,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
