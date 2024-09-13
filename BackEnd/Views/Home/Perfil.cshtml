@@ -1,19 +1,28 @@
 @model BackEnd.Models.Usuario;
+@{
+    var fotoPath = "/images/" + (Model.FotoPerfil);
+    Console.WriteLine(fotoPath);
+}
 <body class="h-screen w-full grid grid-cols-[35%_1fr]">
     <main class="grid grid-rows-[70%_1fr]">
         <!--Perfil de usuario-->
         <section class="flex justify-center items-end">
             <div class="py-2 text-white h-11/12 w-11/12 flex flex-col justify-start  items-center bg-gris rounded-3xl">
                 <div class="h-3/5 w-72 rounded-full m-2 bg-white flex justify-center items items-center">
-                    <svg class="fill-gris h-44 w-44" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.71 170.52">
-                        <circle class="cls-1" cx="62.86" cy="40.81" r="37.31"/>
-                        <path class="cls-1" d="M62.86,166.97s49.73,2.37,59.26-26.52c2.93-63.17-59.26-62.32-59.26-62.32,0,0-62.18-.84-59.26,62.32,9.52,28.89,59.26,26.52,59.26,26.52Z"/>
-                    </svg>
+                    <img src=@fotoPath asp-append-version/>
                 </div>
+               
+                <div>
+                    <form asp-action="EditarFoto" asp-controller="Home" method="post" enctype="multipart/form-data">
+                        <input type="file" name="FotoPerfil" />
+                        <button type="submit">Editar</button>
+                    </form>
+                </div>
+                    
                 <h2 class="mb-2 text-2xl font-medium">@Model.NombreUsuario</h2>
                 <div class="mb-2 flex text-xl">
-                    <p class="mr-4">nombre</p>
-                    <p>apellido</p>
+                    <p class="mr-4">@Model.Nombre</p>
+                    <p>@Model.Apellido</p>
                 </div>
                 <!--Descripcion input-->
                 <label for="descripcion"></label>

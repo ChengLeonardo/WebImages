@@ -77,6 +77,14 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/images/29b34238-0b2e-4c25-8b7c-4c49042d4395_images.jpeg",
+      "PackagePath": "staticwebassets/images/29b34238-0b2e-4c25-8b7c-4c49042d4395_images.jpeg"
+    },
+    {
+      "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/images/images.jpeg",
+      "PackagePath": "staticwebassets/images/images.jpeg"
+    },
+    {
       "Id": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
