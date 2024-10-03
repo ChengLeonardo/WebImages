@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oHleyspOA2owhOQBWtPHP8u9AQP2X8d+nFecdqpwCII=",
+  "Hash": "qU3dKfqlFvggBOF2Wm88GA0R9Dg9qWILSTc2SVFiiXo=",
   "Source": "BackEnd",
   "BasePath": "_content/BackEnd",
   "Mode": "Default",
@@ -414,6 +414,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/29b34238-0b2e-4c25-8b7c-4c49042d4395_images.jpeg"
+    },
+    {
+      "Identity": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/wwwroot/images/616450ef-22d1-416d-9a6f-53c0aa4618f2_7897490e-2cd3-44e0-b620-78878419a7fc.jpg",
+      "SourceId": "BackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/wwwroot/",
+      "BasePath": "_content/BackEnd",
+      "RelativePath": "images/616450ef-22d1-416d-9a6f-53c0aa4618f2_7897490e-2cd3-44e0-b620-78878419a7fc.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/616450ef-22d1-416d-9a6f-53c0aa4618f2_7897490e-2cd3-44e0-b620-78878419a7fc.jpg"
     },
     {
       "Identity": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/wwwroot/images/images.jpeg",
