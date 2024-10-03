@@ -1,0 +1,62 @@
+@model BackEnd.Models.Usuario;
+@{
+    var fotoPath = "/images/" + (Model.FotoPerfil);
+    Console.WriteLine(fotoPath);
+}
+<body class="h-screen w-full grid grid-cols-[35%_1fr]">
+    <main class="grid grid-rows-[70%_1fr]">
+        <!--Perfil de usuario-->
+        <section class="flex justify-center items-end">
+            <div class="py-2 text-white h-11/12 w-11/12 flex flex-col justify-start  items-center bg-gris rounded-3xl">
+                <div class="h-3/5 w-72 rounded-full m-2 bg-white flex justify-center items items-center">
+                    <img src=@fotoPath asp-append-version/>
+                </div>
+               
+                <div>
+                    <form asp-action="EditarFoto" asp-controller="Home" method="post" enctype="multipart/form-data">
+                        <input type="file" name="FotoPerfil" />
+                        <button type="submit">Editar</button>
+                    </form>
+                </div>
+                    
+                <h2 class="mb-2 text-2xl font-medium">@Model.NombreUsuario</h2>
+                <div class="mb-2 flex text-xl">
+                    <p class="mr-4">@Model.Nombre</p>
+                    <p>@Model.Apellido</p>
+                </div>
+                <!--Descripcion input-->
+                <label for="descripcion"></label>
+                <input class="placeholder-white mb-2 border-2 outline-none bg-gris border-none text-white w-72 rounded-lg h-8 pl-4" type="text" placeholder="descripcion">
+                <!--Boton modificar-->
+                <a class="hover:scale-110 duration-300 flex mt-2 justify-center rounded-3xl h-10 w-48 bg-azul font-medium text-lg py-2" href="#">Configuracion</a>
+            </div>    
+        </section>
+        <!--Sigue a y seguidores del usuario-->
+        <section class="mt-4 w-full flex flex-wrap flex-col justify-center items-center">
+            <div class="mb-8 w-10/12 rounded-3xl h-auto bg-gris flex justify-around text-white">
+                <h2 class="my-4 hover:scale-110 duration-300 cursor-pointer text-xl bg-azul py-2 px-8 rounded-3xl">Seguidores</h2>
+                <h2 class="my-4 hover:scale-110 duration-300 cursor-pointer text-xl bg-azul py-2 px-8 rounded-3xl">Seguidos</h2>
+            </div>
+        </section>
+    </main>
+    <!--Contenedor grid-->
+    <section class="items-center flex justify-center">
+        <!--Fondo gris-->
+        <div class="flex items-center px-8 flex-row justify-center flex-wrap h-11/12 w-11/12 bg-gris rounded-xl">
+            <!--Imagenes-->
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+            <div class="mx-4 h-40 w-40 bg-white rounded-xl"></div>
+        </div>
+    </section>
+</body>
+</html>

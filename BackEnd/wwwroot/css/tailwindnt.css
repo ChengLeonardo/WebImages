@@ -1,0 +1,25 @@
+#body{
+    overflow: hidden;
+    position: relative;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+#body ::after{
+    content: "";
+    background-image: linear-gradient(rgb(0, 0, 0, .7), rgba(0, 0, 0, .7)),url(../Imagenens-layout/Fondito.jpeg);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    filter: blur(8px);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+}
+
+#login{
+    border-radius: 50px;
+}
