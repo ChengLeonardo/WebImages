@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/BackEnd.csproj": {}
+    "/home/et12alumno/Escritorio/WebImages/BackEnd/BackEnd.csproj": {}
   },
   "projects": {
-    "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/BackEnd.csproj": {
+    "/home/et12alumno/Escritorio/WebImages/BackEnd/BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/BackEnd.csproj",
+        "projectUniqueName": "/home/et12alumno/Escritorio/WebImages/BackEnd/BackEnd.csproj",
         "projectName": "BackEnd",
-        "projectPath": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/BackEnd.csproj",
+        "projectPath": "/home/et12alumno/Escritorio/WebImages/BackEnd/BackEnd.csproj",
         "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/obj/",
+        "outputPath": "/home/et12alumno/Escritorio/WebImages/BackEnd/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/et12alumno/.nuget/NuGet/NuGet.Config"

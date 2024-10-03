@@ -49,27 +49,45 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> EditarFoto(IFormFile FotoPerfil)
+    public async Task<IActionResult> EditarFoto (IFormFile FotoPerfil)
     {
         if(ModelState.IsValid)
-        {   
+        {
             string uniqueFileName = null;
 
             if(FotoPerfil != null)
             {
-                string uploadsFolder = Path.Combine(_environment.WebRootPath, "images");
+                // Obtener el usuario actual de la base de datos
+                var usuario = _repoUsuario.IdSelect(Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value));
 
+                // Obtener la ruta de la foto anterior si existe
+                if (!string.IsNullOrEmpty(usuario.FotoPerfil))
+                {
+                    string previousFilePath = Path.Combine(_environment.WebRootPath, "images", usuario.FotoPerfil);
+
+                    // Comprobar si la foto anterior existe y eliminarla
+                    if (System.IO.File.Exists(previousFilePath))
+                    {
+                        System.IO.File.Delete(previousFilePath);
+                    }
+                }
+
+                // Guardar la nueva foto
+                string uploadsFolder = Path.Combine(_environment.WebRootPath, "images");
                 uniqueFileName = Guid.NewGuid().ToString() + "_" + FotoPerfil.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-                FotoPerfil.CopyTo(new FileStream(filePath, FileMode.Create));
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await FotoPerfil.CopyToAsync(fileStream); // Uso de CopyToAsync para operaciones asíncronas
+                }
+
+                // Actualizar la propiedad FotoPerfil del usuario con el nuevo nombre de archivo
+                usuario.FotoPerfil = uniqueFileName;
+
+                // Actualizar el usuario en la base de datos
+                _repoUsuario.Update(usuario);
             }
-
-            var usuario = _repoUsuario.IdSelect(Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value));
-            usuario.FotoPerfil = uniqueFileName;
-
-            _repoUsuario.Update(usuario);
-
         }
         return RedirectToAction("Perfil", "Home");
     }
