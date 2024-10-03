@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qEY6SVARu20yPzWZWaeWJkJksdkS3JQ0Xdbk8ELV4kG2wkRvhZIxwvNynSCOHCPzIexCod5BsAR179KicpYrzQ==",
+  "dgSpecHash": "J3TiCwW2ky+DqxO5IPv1tBoo5W9dtVF6OJLJT4Tb5oMvMN69VKJ+fwFwrq53XWwt36eS0/A0LJXuBmEqW+hoHw==",
   "success": true,
-  "projectFilePath": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/BackEnd.csproj",
+  "projectFilePath": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/BackEnd.csproj",
   "expectedPackageFiles": [
     "/home/et12alumno/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/et12alumno/.nuget/packages/microsoft.entityframeworkcore/8.0.8/microsoft.entityframeworkcore.8.0.8.nupkg.sha512",

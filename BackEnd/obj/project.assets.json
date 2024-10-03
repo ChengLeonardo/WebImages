@@ -769,11 +769,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/BackEnd.csproj",
+      "projectUniqueName": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/BackEnd.csproj",
       "projectName": "BackEnd",
-      "projectPath": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/BackEnd.csproj",
+      "projectPath": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/BackEnd.csproj",
       "packagesPath": "/home/et12alumno/.nuget/packages/",
-      "outputPath": "/mnt/Datos/2024_5_7/Cheng_Leonardo/WebImages/BackEnd/obj/",
+      "outputPath": "/home/et12alumno/s/home/et12alumno/Escritorio/WebImagess2/BackEnd/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/et12alumno/.nuget/NuGet/NuGet.Config"
@@ -832,7 +832,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
