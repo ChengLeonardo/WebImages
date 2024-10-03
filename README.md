@@ -1,52 +1,85 @@
 # WebImages
-et12
 
-Pasos para instalar el proyecto:
+## ET12 - Proyecto WebImages
 
-Instale .net por la pagina oficial si no lo posee:
-https://dotnet.microsoft.com/en-us/download
+### Requisitos previos
 
-Instale mysql por la pagina oficial si no lo posee:
-https://dev.mysql.com/downloads/installer/
+Antes de comenzar, asegúrate de tener instalados los siguientes programas:
 
-Instale git por la pagina oficial si no lo posee:
-https://git-scm.com/
+1. **.NET Core**  
+   Si no lo tienes instalado, descárgalo desde la página oficial:  
+   [Descargar .NET](https://dotnet.microsoft.com/en-us/download)
 
-En la terminal donde desee clonar el repositorio ejecute el siguiente comando:
-git clone https://github.com/ChengLeonardo/WebImages.git
+2. **MySQL**  
+   Si no tienes MySQL instalado, descárgalo desde la página oficial:  
+   [Descargar MySQL](https://dev.mysql.com/downloads/installer/)
 
-En la terminal del directorio principal ejectute este comando 
-git switch BackEnd
+3. **Git**  
+   Si no tienes Git instalado, descárgalo desde la página oficial:  
+   [Descargar Git](https://git-scm.com/)
 
-En su posicion de directorio, ejecute este comando:
-cd Backend
-cd BaseDatos
-mysql -u "tu-nombre-usuario-de-la-base-de-datos" -p
+---
 
-Deberia aparecer la siguiente linea:
-Enter Password:
+### Instalación del proyecto
 
-Aqui ingrese su contraseña del usuario de la base de datos
+Sigue estos pasos para configurar el proyecto localmente:
 
-Luego ejecte:
-source install.sql
+1. **Clonar el repositorio**  
+   Abre la terminal en el directorio donde deseas clonar el proyecto y ejecuta:
+   ```bash
+   git clone https://github.com/ChengLeonardo/WebImages.git
+   ```
 
-Al terminar el proceso, ejecute:
-exit
+2. **Cambiar a la rama `BackEnd`**  
+   Dentro del repositorio clonado, cambia a la rama correspondiente con el siguiente comando:
+   ```bash
+   git switch BackEnd
+   ```
 
-Luego ingrese:
-cd ..
-cd ..
-cd BackEnd 
+3. **Configurar la base de datos**  
+   Navega al directorio donde se encuentra el script de la base de datos y conéctate a MySQL:
+   ```bash
+   cd Backend
+   cd BaseDatos
+   mysql -u "tu-usuario-mysql" -p
+   ```
 
-Ahora modifique la siguiente linea en el archivo de appsettings.json, completando los datos correspondientes:
-"server=localhost;database=5to_MiPaginaDeImagenes;user=tu-usuario;password=tu-contraseña;"
+   A continuación, se te pedirá que ingreses la contraseña de tu usuario MySQL:
+   ```text
+   Enter Password: ****
+   ```
 
-Y por ultimo realize este comando para poder ejecutar la pagina y ver sus funcionalidades
-dotnet run
+4. **Importar la base de datos**  
+   Una vez conectado a MySQL, ejecuta el siguiente comando para importar la estructura de la base de datos:
+   ```bash
+   source install.sql
+   ```
+   Cuando el proceso termine, cierra la sesión de MySQL con:
+   ```bash
+   exit
+   ```
 
-Participantes del equipo:
-Cheng Leonardo
-Verduguez Miguel
-Espinola Luis
-Mendoza Davis
+5. **Configurar la cadena de conexión**  
+   Vuelve al directorio `BackEnd` y edita el archivo `appsettings.json` para configurar la conexión a tu base de datos. Encuentra la sección `ConnectionStrings` y modifica la línea con tus credenciales de MySQL:
+   ```json
+   "ConnectionStrings": {
+     "DefaultConnection": "server=localhost;database=5to_MiPaginaDeImagenes;user=tu-usuario;password=tu-contraseña;"
+   }
+   ```
+
+6. **Ejecutar el proyecto**  
+   Finalmente, desde el directorio principal del backend, ejecuta el siguiente comando para iniciar la aplicación:
+   ```bash
+   dotnet run
+   ```
+
+---
+
+### Equipo de desarrollo
+
+- **Cheng Leonardo**
+- **Verduguez Miguel**
+- **Espínola Luis**
+- **Mendoza Davis**
+
+---
