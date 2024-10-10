@@ -1,4 +1,5 @@
 using System.Data;
+
 using BackEnd.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,10 +9,9 @@ public class MyDbContext : DbContext
 {
     public DbSet<Usuario> Usuario { get; set; }
     public DbSet<Post> Post { get; set; }
-    public DbSet<UsuarioLikes> UsuarioLike { get; set; }
-    public DbSet<Seguidor> Seguidore { get; set; }
+    public DbSet<UsuarioLikes> UsuarioLikes { get; set; }
+    public DbSet<Seguidor> Seguidor { get; set; }
     public DbSet<RolUsuario> RolUsuario { get; set; }
-
     public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
     {
     }

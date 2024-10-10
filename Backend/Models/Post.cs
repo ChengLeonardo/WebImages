@@ -11,10 +11,10 @@ public class Post
     [StringLength(255)]
     public string UrlImagen { get; set; } // URL de la imagen
 
-    public uint? IdUsuario { get; set; }
+    public uint IdUsuario { get; set; }
 
     [Required]
-    public uint CantidadLikes { get; set; } = 0;
+    public List<UsuarioLikes> ListLikes { get; set; } = new List<UsuarioLikes>();
 
     [Required]
     public DateTime FechaPublicacion { get; set; }

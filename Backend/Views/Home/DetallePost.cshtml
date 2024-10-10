@@ -1,0 +1,20 @@
+@model BackEnd.Models.DetallePostViewModel
+
+<div class="container mx-auto mt-8">
+    <div class="bg-white rounded-lg shadow-lg p-6">
+        <h1 class="text-2xl font-bold mb-4">Detalle del Post</h1>
+        
+        <div class="mb-4">
+            <img src="~/images/@Model.Post.UrlImagen" alt="Imagen del post" class="w-full h-auto rounded-lg">
+        </div>
+        
+        <div class="mb-4">
+           
+        </div>
+        
+        <div class="mb-4">
+            <p class="text-sm text-gray-500">Publicado por: @Model.Usuario.NombreUsuario</p>
+            <p class="text-sm text-gray-500">Fecha: @Model.Post.FechaPublicacion.ToString("dd/MM/yyyy HH:mm")</p>
+        </div>
+    </div>
+</div>

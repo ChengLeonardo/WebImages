@@ -30,4 +30,5 @@ public class Usuario
 
     [ForeignKey("IdRol")]
     public RolUsuario? Rol { get; set; }
+    public List<Post> Posteos { get; set; } = new List<Post>();
 }

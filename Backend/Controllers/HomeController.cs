@@ -15,12 +15,14 @@ public class HomeController : Controller
     private readonly IRepoUsuario _repoUsuario;
     private readonly IRepoRolUsuario _repoRolUsuario;
     private readonly IRepoPost _repoPost;
-    public HomeController(IRepoUsuario repoUsuario, IRepoRolUsuario repoRolUsuario, IWebHostEnvironment environment, IRepoPost repoPost)
+    private readonly IRepoUsuarioLikes _repoUsuarioLikes;
+    public HomeController(IRepoUsuario repoUsuario, IRepoRolUsuario repoRolUsuario, IWebHostEnvironment environment, IRepoPost repoPost, IRepoUsuarioLikes repoUsuarioLikes)
     {
         _environment = environment;
         _repoUsuario = repoUsuario;
         _repoRolUsuario = repoRolUsuario;
         _repoPost = repoPost;
+        _repoUsuarioLikes = repoUsuarioLikes;
     }
 
     [HttpGet]
@@ -139,5 +141,44 @@ public class HomeController : Controller
         }
 
         return View(model);
+    }
+
+    [HttpGet]
+    public IActionResult DetallePost(uint id)
+    {
+        var post = _repoPost.IdSelect(id);
+        var usuario = _repoUsuario.IdSelect(post.IdUsuario);
+        var viewModel = new DetallePostViewModel { Post = post, Usuario = usuario };
+        return View(viewModel);
+    }
+    
+
+    [HttpPost]
+    public IActionResult LikePost(uint id)
+    {
+        var userId = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        var post = _repoPost.IdSelect(id);
+        var like = _repoUsuarioLikes.SelectWhere(l => l.IdUsuario == userId && l.IdPost == id).FirstOrDefault();
+
+        if (like == null)
+        {
+            // El usuario no ha dado like, así que lo agregamos
+            var nuevoLike = new UsuarioLikes
+            {
+                IdUsuario = userId,
+                IdPost = id
+            };
+            _repoUsuarioLikes.Insert(nuevoLike, "IdLike");
+            post.ListLikes.Add(nuevoLike);
+        }
+        else
+        {
+            // El usuario ya dio like, así que lo quitamos
+            _repoUsuarioLikes.Delete(like);
+            post.ListLikes.Remove(like);
+        }
+
+        _repoPost.Update(post);
+        return RedirectToAction("Index");
     }
 }
