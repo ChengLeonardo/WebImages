@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZueAX1o82rNIqzJv/xms14X2fNnGt4b6lshe4dClN8s=",
+  "Hash": "WugrpbilSusyZ7Kr5V0E8PTM6FAAb0hGJuulm0k5CkA=",
   "Source": "BackEnd",
   "BasePath": "_content/BackEnd",
   "Mode": "Default",
@@ -433,6 +433,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/616450ef-22d1-416d-9a6f-53c0aa4618f2_7897490e-2cd3-44e0-b620-78878419a7fc.jpg"
+    },
+    {
+      "Identity": "/home/et12alumno/Escritorio/WebImages/BackEnd/wwwroot/images/f505297c-b57c-4614-8de6-255023a8b511_SkullMammothmon.png",
+      "SourceId": "BackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/et12alumno/Escritorio/WebImages/BackEnd/wwwroot/",
+      "BasePath": "_content/BackEnd",
+      "RelativePath": "images/f505297c-b57c-4614-8de6-255023a8b511_SkullMammothmon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/f505297c-b57c-4614-8de6-255023a8b511_SkullMammothmon.png"
     },
     {
       "Identity": "/home/et12alumno/Escritorio/WebImages/BackEnd/wwwroot/images/images.jpeg",
