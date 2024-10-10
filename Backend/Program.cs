@@ -25,6 +25,15 @@ var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MyDbContext>(dbContextOptions => dbContextOptions.UseMySql(connectionString, serverVersion));
+
+var options = new DbContextOptionsBuilder<MyDbContext>()
+    .UseMySql(connectionString, serverVersion)
+    .Options;
+
+var context = new MyDbContext(options);
+
+context.Database.EnsureCreated();
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())

@@ -5,7 +5,7 @@ using BackEnd.Interface;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace BackEnd.Controllers;
 
@@ -30,7 +30,7 @@ public class HomeController : Controller
     {
         if (User.Identity.IsAuthenticated)
         {
-            var allPosts = _repoPost.Select().ToList();
+            List<Post> allPosts = _repoPost.Select().Include(p => p.Usuario).Include(p => p.ListLikes).ToList();
             var viewModel = new IndexViewModel
             {
                 AllPosts = allPosts
@@ -50,14 +50,23 @@ public class HomeController : Controller
     }
 
     [HttpGet]
-    public IActionResult Perfil()
+    public IActionResult Perfil(uint? id)
     {
-        var userId = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-        var usuario = _repoUsuario.IdSelect(userId);
-        var postsUsuario = _repoPost.SelectWhere(p => p.IdUsuario == userId).ToList();
+        uint IdUsuario;
+        if(id == null)
+        {
+            IdUsuario = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        }
+        else
+        {
+            IdUsuario = id.Value;
+        }
+        var usuario = _repoUsuario.IdSelect(IdUsuario);
+        var postsUsuario = _repoPost.SelectWhere(p => p.IdUsuario == IdUsuario).Include(p => p.ListLikes).ToList();
 
         var viewModel = new PerfilViewModel
         {
+            EsUsuarioActual = (id == null),
             Usuario = usuario,
             PostsUsuario = postsUsuario
         };
@@ -154,10 +163,18 @@ public class HomeController : Controller
     
 
     [HttpPost]
-    public IActionResult LikePost(uint id)
+    public IActionResult LikePost(uint id, string returnUrl)
     {
         var userId = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
         var post = _repoPost.IdSelect(id);
+
+        // Verificar si el usuario que realiza la acción es el mismo que creó el post
+        if (post.IdUsuario == userId)
+        {
+            // Si es el mismo usuario, no permitir la acción
+            return Redirect(returnUrl);
+        }
+
         var like = _repoUsuarioLikes.SelectWhere(l => l.IdUsuario == userId && l.IdPost == id).FirstOrDefault();
 
         if (like == null)
@@ -168,8 +185,8 @@ public class HomeController : Controller
                 IdUsuario = userId,
                 IdPost = id
             };
-            _repoUsuarioLikes.Insert(nuevoLike, "IdLike");
             post.ListLikes.Add(nuevoLike);
+            _repoPost.Update(post);
         }
         else
         {
@@ -179,6 +196,9 @@ public class HomeController : Controller
         }
 
         _repoPost.Update(post);
-        return RedirectToAction("Index");
+        
+        // Usar la URL de retorno proporcionada
+        return Redirect(returnUrl);
     }
+
 }

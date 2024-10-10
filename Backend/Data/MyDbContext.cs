@@ -19,6 +19,11 @@ public class MyDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<Post>()
+            .HasOne(p => p.Usuario)
+            .WithMany(u => u.Posteos)
+            .HasForeignKey(p => p.IdUsuario);
+
         // Configuración de RolUsuario
         modelBuilder.Entity<RolUsuario>()
             .HasKey(r => r.IdRol);

@@ -18,7 +18,7 @@ public class TestController : Controller
 
     public IActionResult Index()
     {
-        List<RolUsuario> rolUsuarios = _repoRolUsuario.Select();
+        List<RolUsuario> rolUsuarios = _repoRolUsuario.Select().ToList();
         return View(rolUsuarios);
     }
     [HttpGet]

@@ -19,6 +19,5 @@ public class Post
     [Required]
     public DateTime FechaPublicacion { get; set; }
 
-    [ForeignKey("IdUsuario")]
     public Usuario? Usuario { get; set; }
 }

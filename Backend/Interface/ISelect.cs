@@ -4,5 +4,5 @@ namespace BackEnd.Interface;
 
 public interface ISelect<T>
 {
-    List<T> Select();
+    IQueryable<T> Select();
 }

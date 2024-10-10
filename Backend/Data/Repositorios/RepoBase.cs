@@ -13,7 +13,7 @@ public class RepoBase<T, N> : IRepoBase<T, N> where T : class
     public RepoBase(MyDbContext context, DbSet<T> dbSet)
     {
         _context = context;
-        _dbSet = _context.Set<T>();
+        _dbSet = dbSet;
     }
 
     public void Delete(T objeto)
@@ -37,14 +37,14 @@ public class RepoBase<T, N> : IRepoBase<T, N> where T : class
         return (N)keyProperty;
     }
 
-    public List<T> Select()
+    public IQueryable<T> Select()
     {
-        return _dbSet.ToList();
+        return _dbSet;
     }
-
-    public List<T> SelectWhere(Expression<Func<T, bool>> predicate)
+    
+    public IQueryable<T> SelectWhere(Expression<Func<T, bool>> predicate)
     {
-        return _dbSet.Where(predicate).ToList();
+        return _dbSet.Where(predicate);
     }
 
     public void Update(T objeto)

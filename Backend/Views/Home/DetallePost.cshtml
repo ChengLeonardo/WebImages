@@ -16,5 +16,11 @@
             <p class="text-sm text-gray-500">Publicado por: @Model.Usuario.NombreUsuario</p>
             <p class="text-sm text-gray-500">Fecha: @Model.Post.FechaPublicacion.ToString("dd/MM/yyyy HH:mm")</p>
         </div>
+        
+        <form asp-controller="Home" asp-action="Perfil" asp-route-id="@Model.Post.IdUsuario" method="get">
+            <input type="image" title="@Model.Usuario.NombreUsuario"
+                   src="@("/images/" + (@Model.Usuario.FotoPerfil ?? "Imagenens-layout/svg/Usuario-Icono.svg"))"
+                   class="rounded-full w-12 h-12 object-cover cursor-pointer" />
+        </form>
     </div>
 </div>

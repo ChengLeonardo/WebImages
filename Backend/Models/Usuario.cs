@@ -24,7 +24,7 @@ public class Usuario
     public string Email { get; set; }
 
     [StringLength(255)]
-    public string? FotoPerfil { get; set; } // URL de la imagen de perfil
+    public string? FotoPerfil { get; set; } = null; // URL de la imagen de perfil
 
     public uint IdRol { get; set; }
 

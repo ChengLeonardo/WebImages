@@ -16,12 +16,15 @@
                 <div class="h-3/5 w-72 m-2 bg-gris flex justify-center items-center">
                     <img class="h-full w-full rounded-full flex justify-center items-center" src=@fotoPath asp-append-version/>
                 </div>
-                <div class="flex justify-center items-center">
-                    <form class="flex flex-col justify-center items-center" asp-action="EditarFoto" asp-controller="Home" method="post" enctype="multipart/form-data">
-                        <input type="file" name="NuevaFotoPerfil" />
-                        <button class="bg-azul text-white font-bold w-16 h-8 rounded-3xl" type="submit">Editar</button>
-                    </form>
-                </div>
+                @if(Model.EsUsuarioActual)
+                {
+                    <div class="flex justify-center items-center">
+                        <form class="flex flex-col justify-center items-center" asp-action="EditarFoto" asp-controller="Home" method="post" enctype="multipart/form-data">
+                            <input type="file" name="NuevaFotoPerfil" />
+                            <button class="bg-azul text-white font-bold w-16 h-8 rounded-3xl" type="submit">Editar</button>
+                        </form>
+                    </div>
+                }
                     
                 <h2 class="mb-2 text-2xl font-medium">@Model.Usuario.NombreUsuario</h2>
                 <div class="mb-2 flex text-xl">
@@ -31,7 +34,10 @@
                 <!--Email-->
                 <p class="mb-2 text-lg">@Model.Usuario.Email</p>
                 <!--Boton modificar-->
-                <a class="hover:scale-110 duration-300 flex mt-2 justify-center rounded-3xl h-10 w-48 bg-azul font-medium text-lg py-2" href="#">Configuracion</a>
+                @if(Model.EsUsuarioActual)
+                {
+                    <a class="hover:scale-110 duration-300 flex mt-2 justify-center rounded-3xl h-10 w-48 bg-azul font-medium text-lg py-2" href="#">Configuración</a>
+                }
             </div>    
         </section>
         <!--Sigue a y seguidores del usuario-->
@@ -46,9 +52,12 @@
         <!--Fondo gris-->
         <div class="flex flex-col items-center px-8 h-11/12 w-11/12 bg-gris rounded-xl relative">
             <!-- Añadir botón Postear -->
-            <a asp-controller="Home" asp-action="Postear" class="absolute top-4 right-4 bg-azul hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-sm">
-                Postear
-            </a>
+            @if(Model.EsUsuarioActual)
+            {
+                <a asp-controller="Home" asp-action="Postear" class="absolute top-4 right-4 bg-azul hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-sm">
+                    Postear
+                </a>
+            }
             <!-- Contenedor de publicaciones -->
             <div class="flex flex-wrap justify-center mt-12">
                 @foreach (var post in Model.PostsUsuario)
@@ -57,11 +66,20 @@
                         <div class="h-full w-full relative">
                             <img src="@("/images/" + @post.UrlImagen)" alt="Post Image" class="h-full w-full object-cover rounded-xl">
                             <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-1 rounded-b-xl">
-                                <p class="text-center text-sm">Likes: @post.ListLikes.Count</p>
+                                
                                 <p class="text-center text-xs">@post.FechaPublicacion.ToShortDateString()</p>
                             </div>
                         </div>
                     </a>
+                    
+                    @if(!Model.EsUsuarioActual)
+                    {
+                        <form asp-action="LikePost" asp-controller="Home" asp-route-id="@post.IdPost" method="post">
+                            <p class="text-center text-sm">Likes: @post.ListLikes.Count()</p>
+                            <input type="hidden" name="returnUrl" value="@Context.Request.Path@Context.Request.QueryString" />
+                            <input src="~/Imagenens-layout/svg/puntos.svg" type="image" class="bg-azul h-8 w-8 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" alt="Like">
+                        </form>
+                    }
                 }
             </div>
         </div>
