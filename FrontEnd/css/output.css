@@ -620,6 +620,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -630,10 +634,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
 }
 
 .flex {
@@ -676,8 +676,8 @@ video {
   height: 10rem;
 }
 
-.h-48 {
-  height: 12rem;
+.h-64 {
+  height: 16rem;
 }
 
 .h-72 {
@@ -696,12 +696,12 @@ video {
   height: 100vh;
 }
 
-.h-64 {
-  height: 16rem;
-}
-
 .max-h-screen {
   max-height: 100vh;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-11\/12 {
@@ -710,6 +710,10 @@ video {
 
 .w-12 {
   width: 3rem;
+}
+
+.w-2\/5 {
+  width: 40%;
 }
 
 .w-24 {
@@ -748,6 +752,10 @@ video {
   width: 83.333333%;
 }
 
+.w-64 {
+  width: 16rem;
+}
+
 .w-72 {
   width: 18rem;
 }
@@ -762,18 +770,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-64 {
-  width: 16rem;
-}
-
-.w-2\/5 {
-  width: 40%;
 }
 
 .cursor-pointer {
@@ -806,10 +802,6 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.items-start {
-  align-items: flex-start;
 }
 
 .items-center {
@@ -899,6 +891,10 @@ video {
   fill: #4b7f69;
 }
 
+.fill-VerdeOscuro {
+  fill: #4b9469;
+}
+
 .fill-azul {
   fill: #5378E0;
 }
@@ -907,12 +903,16 @@ video {
   fill: #D7D9DE;
 }
 
+.fill-grisOscuro {
+  fill: #cbcdd1;
+}
+
 .fill-white {
   fill: #ffff;
 }
 
-.fill-VerdeOscuro {
-  fill: #4b9469;
+.fill-grisMasOscuro {
+  fill: #9ea0a3;
 }
 
 .stroke-white {
@@ -1051,7 +1051,39 @@ video {
   fill: #D7D9DE;
 }
 
+.hover\:fill-Cielo:hover {
+  fill: #a3e1ff;
+}
+
+.hover\:fill-Amarillo:hover {
+  fill: #ffce00;
+}
+
+.hover\:fill-Verde:hover {
+  fill: #4b7f69;
+}
+
+.hover\:fill-VerdeOscuro:hover {
+  fill: #4b9469;
+}
+
 .focus\:border-gris:focus {
   --tw-border-opacity: 1;
   border-color: rgb(215 217 222 / var(--tw-border-opacity));
+}
+
+.group:hover .group-hover\:fill-Cielo {
+  fill: #a3e1ff;
+}
+
+.group:hover .group-hover\:fill-Amarillo {
+  fill: #ffce00;
+}
+
+.group:hover .group-hover\:fill-Verde {
+  fill: #4b7f69;
+}
+
+.group:hover .group-hover\:fill-VerdeOscuro {
+  fill: #4b9469;
 }
