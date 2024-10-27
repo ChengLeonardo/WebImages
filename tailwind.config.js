@@ -11,7 +11,11 @@ module.exports = {
         azul: "#5378E0",
         gris: "#D7D9DE",
         grisOscuro: "#cbcdd1",
-        azulOscuro: "#4160b4"
+        azulOscuro: "#4160b4",
+        Amarillo: "#ffce00",
+        Verde: "#4b7f69",
+        Cielo: "#a3e1ff",
+        VerdeOscuro: "#4b9469"
       }
     },
   },
