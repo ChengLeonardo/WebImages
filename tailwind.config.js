@@ -10,7 +10,8 @@ module.exports = {
         white: "#ffff",
         azul: "#5378E0",
         gris: "#D7D9DE",
-        grisOscuro: "#cbcdd1"
+        grisOscuro: "#cbcdd1",
+        azulOscuro: "#4160b4"
       }
     },
   },
