@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'selector',
   content: ["./FrontEnd/**/*.{html,js}"],
   theme: {
     extend: {
@@ -16,7 +17,8 @@ module.exports = {
         Amarillo: "#ffce00",
         Verde: "#4b7f69",
         Cielo: "#a3e1ff",
-        VerdeOscuro: "#4b9469"
+        VerdeOscuro: "#4b9469",
+        Luna: "##56586b"
       }
     },
   },

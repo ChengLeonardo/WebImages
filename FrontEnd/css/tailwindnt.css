@@ -24,22 +24,3 @@
     border-radius: 50px;
 }
 
-#Galeria .cls-1 {
-    fill: #ffce00;
-  }
-
-#Galeria  .cls-1, .cls-2, .cls-3, .cls-4 {
-    stroke-width: 0px;
-  }
-
-#Galeria  .cls-2 {
-    fill: #4b7f69;
-  }
-
-#Galeria .cls-3 {
-    fill: #a3e1ff;
-  }
-
-#Galeria .cls-4 {
-    fill: #4b9469;
-  }
