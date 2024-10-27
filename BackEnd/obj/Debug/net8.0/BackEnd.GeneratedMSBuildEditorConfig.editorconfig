@@ -9,75 +9,75 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BackEnd
 build_property.RootNamespace = BackEnd
-build_property.ProjectDir = /home/et12alumno/Escritorio/WebImages/BackEnd/
+build_property.ProjectDir = C:\Users\gol\Desktop\Visual Studio Code\WebImages\BackEnd\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/et12alumno/Escritorio/WebImages/BackEnd
+build_property.MSBuildProjectDirectory = C:\Users\gol\Desktop\Visual Studio Code\WebImages\BackEnd
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/wwwroot/css/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdC9jc3MvSW5kZXguY3NodG1s
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/wwwroot/css/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxjc3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Home/f.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9mLmNzaHRtbA==
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Home/f.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxmLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Home/Perfil.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9QZXJmaWwuY3NodG1s
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Home/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJmaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Login/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vTG9naW4uY3NodG1s
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Register/Register_1.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVnaXN0ZXIvUmVnaXN0ZXJfMS5jc2h0bWw=
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Register/Register_1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcUmVnaXN0ZXJfMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Register/Register_2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVnaXN0ZXIvUmVnaXN0ZXJfMi5jc2h0bWw=
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Register/Register_2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcUmVnaXN0ZXJfMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Test/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVzdC9EZWxldGUuY3NodG1s
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Test/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Test/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVzdC9JbmRleC5jc2h0bWw=
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Test/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Test/Insert.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVzdC9JbnNlcnQuY3NodG1s
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Test/Insert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxJbnNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/Test/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVzdC9VcGRhdGUuY3NodG1s
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/Test/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/et12alumno/Escritorio/WebImages/BackEnd/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/gol/Desktop/Visual Studio Code/WebImages/BackEnd/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
