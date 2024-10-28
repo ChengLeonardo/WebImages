@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Galeria" data-name="Galeria" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.39 49.39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffce00;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #4b7f69;
+      }
+
+      .cls-3 {
+        fill: #a3e1ff;
+      }
+
+      .cls-4 {
+        fill: #4b9469;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" width="49.39" height="49.39" rx="5.76" ry="5.76"/>
+  <path class="cls-4" d="M0,29.48v-10.61l7.99-7.99c1.12-1.12,2.94-1.12,4.06,0l8.42,8.42,2.96-2.96c1.12-1.12,2.94-1.12,4.06,0l13.56,13.56-41.05-.42Z"/>
+  <path class="cls-2" d="M0,29.48l49.39.24v13.74c0,3.27-2.65,5.93-5.93,5.93H5.93c-3.27,0-5.93-2.65-5.93-5.93v-13.98Z"/>
+  <circle class="cls-1" cx="43.17" cy="6.04" r="3.63"/>
+</svg>
