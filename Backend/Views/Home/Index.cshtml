@@ -1,18 +1,8 @@
 @model IndexViewModel;
 @{
 
-  var loopCantidad = 0;
-  if(Model.AllPosts.Count() < 3)
-  {
-    loopCantidad = Model.AllPosts.Count();
-  }
-  else
-  {
-    loopCantidad = 3;
-  }
-  Console.WriteLine(loopCantidad);
-  var sortedPosts = Model.AllPosts.OrderBy(p => Guid.NewGuid()).ToList();
-
+  var loopCantidad = Model.AllPosts.Count < 3 ? Model.AllPosts.Count : 3;
+  
 }
 
 <body class="transition-all duration-300 dark:bg-neutral-900 bg-gris h-screen w-full grid grid-rows-[10vh_90vh]">
@@ -65,30 +55,65 @@
 
       @for (int i = 0; i < loopCantidad; i++)
       {
-          var post = sortedPosts[i];
-          <!-- Código para mostrar cada post -->
-          <section class="h-full w-3/5 grid grid-cols-[10%_70%_20%]">
-              <div class="flex justify-center items-center flex-col">
-                  <svg class="transition-all duration-300 cursor-pointer h-12 w-12 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"></path>
-                  </svg>
-                  <svg class="transition-all duration-300 cursor-pointer h-8 w-8 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z"></path>
-                  </svg>
-                  <svg class="transition-all duration-300 cursor-pointer h-12 w-12 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="m18.707 12.707-1.414-1.414L13 15.586V6h-2v9.586l-4.293-4.293-1.414 1.414L12 19.414z"></path>
-                  </svg>
-              </div>
+          var post = Model.AllPosts[i];
+        <section class="h-full w-3/5 grid grid-cols-[10%_70%_20%]">
+            <div class="flex justify-center items-center flex-col">
+                <form method="post" asp-action="CambiarPost" asp-controller="Home">
+                    <input type="hidden" name="Direction" value="up" />
+                    @for (int j = 0; j < Model.AllPosts.Count; j++)
+                    {
+                        <input type="hidden" name="AllPosts[@j].IdPost" value="@Model.AllPosts[j].IdPost" />
+                        <input type="hidden" name="AllPosts[@j].Titulo" value="@Model.AllPosts[j].Titulo" />
+                        <input type="hidden" name="AllPosts[@j].Contenido" value="@Model.AllPosts[j].Contenido" />
+                        <input type="hidden" name="AllPosts[@j].UrlImagen" value="@Model.AllPosts[j].UrlImagen" />
+                        <input type="hidden" name="AllPosts[@j].FechaPublicacion" value="@Model.AllPosts[j].FechaPublicacion" />
+                        <input type="hidden" name="AllPosts[@j].IdUsuario" value="@Model.AllPosts[j].IdUsuario" />
+                        <input type="hidden" name="AllPosts[@j].Usuario.Nombre" value="@Model.AllPosts[j].Usuario.Nombre" />
+                        <input type="hidden" name="AllPosts[@j].Usuario.Apellido" value="@Model.AllPosts[j].Usuario.Apellido" />
+                        <input type="hidden" name="AllPosts[@j].Usuario.NombreUsuario" value="@Model.AllPosts[j].Usuario.NombreUsuario" />
+                        <input type="hidden" name="AllPosts[@j].Usuario.FotoPerfil" value="@Model.AllPosts[j].Usuario.FotoPerfil" />
+                    }
+                    <button type="submit">
+                        <svg class="transition-all duration-300 cursor-pointer h-12 w-12 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"></path>
+                        </svg>
+                    </button>
+                </form>
+                <form method="post" asp-action="LikePost" asp-route-returnUrl="@Context.Request.Path" asp-controller="Home">
+                      <input type="hidden" name="postId" asp-route-postId="@post.IdPost">
+                      <button type="submit">
+                          <svg class="transition-all duration-300 cursor-pointer h-8 w-8 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                              <path d="M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z"></path>
+                        </svg>
+                      </button>
+                </form>
+                <form method="post" asp-action="CambiarPost" asp-controller="Home">
+                    @for (int j = 0; j < Model.AllPosts.Count; j++)
+                    {
+                        <input type="hidden" name="AllPosts[@j].IdPost" value="@Model.AllPosts[j].IdPost" />
+                        <input type="hidden" name="AllPosts[@j].Titulo" value="@Model.AllPosts[j].Titulo" />
+                        <input type="hidden" name="AllPosts[@j].Contenido" value="@Model.AllPosts[j].Contenido" />
+                        <input type="hidden" name="AllPosts[@j].UrlImagen" value="@Model.AllPosts[j].UrlImagen" />
+                        <input type="hidden" name="AllPosts[@j].FechaPublicacion" value="@Model.AllPosts[j].FechaPublicacion" />
+                        <input type="hidden" name="AllPosts[@j].IdUsuario" value="@Model.AllPosts[j].IdUsuario" />
+                    }
+                      <input type="hidden" name="Direction" value="down">
+                      <button type="submit">
+                          <svg class="transition-all duration-300 cursor-pointer h-12 w-12 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                              <path d="m18.707 12.707-1.414-1.414L13 15.586V6h-2v9.586l-4.293-4.293-1.414 1.414L12 19.414z"></path>
+                          </svg>    
+                      </button>
+                </form>
+            </div>
               <div class="flex justify-center items-center flex-col">
                   <h1 class="text-azul font-bold">@post.Titulo</h1>
                   <img class="border-none rounded-3xl h-4/5 w-4/5 bg-white" src="~/images/@(post.UrlImagen)" alt="Imagen del post">
               </div>
               <div class="mt-16 font-bold text-xl text-azul flex justify-start items-center flex-col">
                   <div class="flex justify-center items-center">
-                      <!--Imagen y Nombre del Creador del Post-->
                         @if(string.IsNullOrEmpty(post.Usuario.FotoPerfil))
                         {
-                          <div class="transition-all duration-300 dark:bg-neutral-700 h-72 w-72 rounded-full m-2 bg-white flex justify-center items items-center">
+                          <div class="transition-all duration-300 dark:bg-neutral-700 h-24 w-24 rounded-full m-2 bg-white flex justify-center items items-center">
                               <svg class="transition-all duration-300 dark:fill-neutral-600 rounded-full fill-gris h-3/5 w-3/5" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.71 170.52">
                                   <circle class="cls-1" cx="62.86" cy="40.81" r="37.31"/>
                                   <path class="cls-1" d="M62.86,166.97s49.73,2.37,59.26-26.52c2.93-63.17-59.26-62.32-59.26-62.32,0,0-62.18-.84-59.26,62.32,9.52,28.89,59.26,26.52,59.26,26.52Z"/>
@@ -104,14 +129,16 @@
                   </div>
                   @for(int x = 0; x < (loopCantidad - 1); x++)
                   {
-                    <script>console.log(@loopCantidad)</script>
-                    <div class="flex justify-center items-center">
-                      <img class="mt-4 bg-white h-24 w-24 rounded-2xl" src="~/images/@sortedPosts[i + 1].UrlImagen" alt="Post aleatorio">
-                      <p class="ml-8">@sortedPosts[x + 1].Titulo</p>
-                    </div>
+                    if (x + 1 < Model.AllPosts.Count)
+                    {
+                        <div class="flex justify-center items-center">
+                            <img class="mt-4 bg-white h-24 w-24 rounded-2xl" src="~/images/@Model.AllPosts[x + 1].UrlImagen" alt="Post aleatorio">
+                            <p class="ml-8">@Model.AllPosts[x + 1].Titulo</p>
+                        </div>
+                    }
                   }
               </div>
-          </section>
+           </section>
       } 
 
     </main>

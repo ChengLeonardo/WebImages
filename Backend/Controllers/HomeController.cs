@@ -26,14 +26,19 @@ public class HomeController : Controller
     }
 
     [HttpGet]
-    public IActionResult Index()
+    public IActionResult Index(List<Post> allPosts)
     {
         if (User.Identity.IsAuthenticated)
         {
-            List<Post> allPosts = _repoPost.Select().Include(p => p.Usuario).Include(p => p.ListLikes).ToList();
+            if (allPosts == null || allPosts.Count == 0)
+            {
+                allPosts = _repoPost.Select().Include(p => p.Usuario).Include(p => p.ListLikes).ToList();
+                Console.WriteLine("No hay posts disponibles para mostrar, se cargan desde la base de datos.");
+            }
+
             var viewModel = new IndexViewModel
             {
-                AllPosts = allPosts
+                AllPosts = allPosts.OrderBy(p => Guid.NewGuid()).ToList()
             };
             return View(viewModel);
         }
@@ -255,6 +260,32 @@ public class HomeController : Controller
                 NombreUsuario = usuario.NombreUsuario
             };
             return View(model);
+    }
+
+    [HttpPost]
+    public IActionResult CambiarPost(IndexViewModel model)
+    {
+        if (model.AllPosts == null || model.AllPosts.Count == 0)
+        {
+            Console.WriteLine("No hay posts disponibles para cambiar.");
+            ModelState.AddModelError("", "No hay posts disponibles para cambiar.");
+            return RedirectToAction("Index", "Home", model);
         }
 
+        if (model.Direction == "up")
+        {
+            var primerElemento = model.AllPosts[0];
+            model.AllPosts.RemoveAt(0);
+            model.AllPosts.Add(primerElemento);
+        }
+        else if (model.Direction == "down")
+        {
+            var ultimoElemento = model.AllPosts[model.AllPosts.Count - 1];
+            model.AllPosts.RemoveAt(model.AllPosts.Count - 1);
+            model.AllPosts.Insert(0, ultimoElemento);
+        }
+
+        // Redirigir a Index y pasar el modelo actualizado
+        return RedirectToAction(nameof(Index), "Home", model.AllPosts);
+    }
 }
