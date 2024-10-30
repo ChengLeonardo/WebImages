@@ -15,6 +15,11 @@ public class Post
 
     [Required]
     public List<UsuarioLikes> ListLikes { get; set; } = new List<UsuarioLikes>();
+    [Required]
+    public string Titulo { get; set; }
+    [Required]
+    [StringLength(100)]
+    public string Contenido { get; set; }
 
     [Required]
     public DateTime FechaPublicacion { get; set; }

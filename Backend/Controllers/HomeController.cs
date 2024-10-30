@@ -86,16 +86,24 @@ public class HomeController : Controller
             {
                 string uploadsFolder = Path.Combine(_environment.WebRootPath, "images");
 
+                // Eliminar la foto existente si hay una
+                var usuario = _repoUsuario.IdSelect(Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value));
+                if(usuario.FotoPerfil != null)
+                {
+                    string filePathExistente = Path.Combine(uploadsFolder, usuario.FotoPerfil);
+                    if(System.IO.File.Exists(filePathExistente))
+                    {
+                        System.IO.File.Delete(filePathExistente);
+                    }
+                }
+
                 uniqueFileName = Guid.NewGuid().ToString() + "_" + NuevaFotoPerfil.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
                 NuevaFotoPerfil.CopyTo(new FileStream(filePath, FileMode.Create));
+                usuario.FotoPerfil = uniqueFileName;
+                _repoUsuario.Update(usuario);
             }
-
-            var usuario = _repoUsuario.IdSelect(Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value));
-            usuario.FotoPerfil = uniqueFileName;
-
-            _repoUsuario.Update(usuario);
 
         }
         return RedirectToAction("Perfil", "Home");
@@ -112,13 +120,13 @@ public class HomeController : Controller
     }
 
     [HttpGet]
-    public IActionResult Postear()
+    public IActionResult CrearPost()
     {
         return View();
     }
 
     [HttpPost]
-    public async Task<IActionResult> Postear(PostearViewModel model)
+    public async Task<IActionResult> CrearPost(PostearViewModel model)
     {
         if (ModelState.IsValid)
         {
@@ -141,7 +149,9 @@ public class HomeController : Controller
             {
                 UrlImagen = uniqueFileName,
                 IdUsuario = userId,
-                FechaPublicacion = DateTime.Now
+                FechaPublicacion = DateTime.Now,
+                Titulo = model.Titulo,
+                Contenido = model.Descripcion
             };
 
             _repoPost.Insert(post, "IdPost"	);
@@ -200,5 +210,51 @@ public class HomeController : Controller
         // Usar la URL de retorno proporcionada
         return Redirect(returnUrl);
     }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Editar(UsuarioViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var id = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var usuario =  _repoUsuario.IdSelect(id);
+
+                switch (model.Que)
+                {
+                    case "Correo":
+                        usuario.Email = model.Email;
+                        break;
+                    case "Nombre":
+                        usuario.Nombre = model.Nombre;
+                        break;
+                    case "Apellido":
+                        usuario.Apellido = model.Apellido;
+                        break;
+                    case "NombreUsuario":
+                        usuario.NombreUsuario = model.NombreUsuario;
+                        break;
+                }
+                // Aquí puedes agregar la lógica para actualizar la foto de perfil si se proporciona
+                _repoUsuario.Update(usuario);
+                Console.WriteLine("listo");
+            }
+            return RedirectToAction("Perfil", "Home");
+        }
+
+        [HttpGet]
+        public IActionResult Configuracion()
+        {
+            var id = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var usuario = _repoUsuario.IdSelect(id); // Método para obtener el usuario actual
+            var model = new UsuarioViewModel
+            {
+                Nombre = usuario.Nombre,
+                Apellido = usuario.Apellido,
+                Email = usuario.Email,
+                NombreUsuario = usuario.NombreUsuario
+            };
+            return View(model);
+        }
 
 }
