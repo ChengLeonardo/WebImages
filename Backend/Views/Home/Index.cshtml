@@ -1,7 +1,7 @@
 @model IndexViewModel;
 @{
 
-  var loopCantidad = Model.AllPosts.Count < 3 ? Model.AllPosts.Count : 3;
+  var loopCantidad = Model.AllPosts.Count < 4 ? Model.AllPosts.Count : 4;
   var post = Model.AllPosts[0];
 }
 
@@ -53,7 +53,6 @@
     </header>
     <main class="flex justify-center items-center">
 
-
         <section class="h-full w-3/5 grid grid-cols-[10%_70%_20%]">
             <div class="flex justify-center items-center flex-col">
                 <a asp-action="Index" asp-controller="Home" asp-route-Direction="up">
@@ -97,6 +96,7 @@
               </div>
               <div class="mt-16 font-bold text-xl text-azul flex justify-start items-center flex-col">
                   <div class="flex justify-center items-center">
+                  <a asp-action="Perfil" asp-controller="Home" asp-route-id="@post.Usuario.IdUsuario">
                         @if(string.IsNullOrEmpty(post.Usuario.FotoPerfil))
                         {
                           <div class="transition-all duration-300 dark:bg-neutral-700 h-24 w-24 rounded-full m-2 bg-white flex justify-center items items-center">
@@ -111,16 +111,18 @@
                           <img class="ml-4 mr-4 bg-white h-24 w-24 rounded-full" src="~/images/@(post.Usuario.FotoPerfil)">
                           <p>@post.Usuario.NombreUsuario</p>
                         }
-
+                  </a>
                   </div>
                   @for(int x = 0; x < (loopCantidad - 1); x++)
                   {
                     if (x + 1 < Model.AllPosts.Count)
                     {
+                        <a asp-action="Index" asp-controller="Home" asp-route-Direction="@(Model.AllPosts[x + 1].IdPost)">
                         <div class="flex justify-center items-center">
                             <img class="mt-4 bg-white h-24 w-24 rounded-2xl" src="~/images/@Model.AllPosts[x + 1].UrlImagen" alt="Post aleatorio">
                             <p class="ml-8">@Model.AllPosts[x + 1].Titulo</p>
                         </div>
+                        </a>
                     }
                   }
               </div>

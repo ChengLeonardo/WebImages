@@ -49,21 +49,6 @@ public class HomeController : Controller
                 }
                 if (Direction == "up")
                 {
-                    var primerElemento = AllPosts.First();
-                    AllPosts.RemoveAt(0);
-                    AllPosts.Add(primerElemento);
-                    
-                    // Actualizar datos usando IDs
-                    var idsActualizados = AllPosts.Select(p => p.IdPost).ToList();
-                    var postsActualizados = _repoPost.SelectWhere(p => idsActualizados.Contains(p.IdPost))
-                        .Include(p => p.Usuario)
-                        .Include(p => p.ListLikes)
-                        .ToList();
-
-                    AllPosts = idsActualizados.Select(id => postsActualizados.First(p => p.IdPost == id)).ToList();
-                }
-                else if (Direction == "down")
-                {
                     var ultimoElemento = AllPosts.Last();
                     AllPosts.RemoveAt(AllPosts.Count - 1);
                     AllPosts.Insert(0, ultimoElemento);
@@ -77,13 +62,12 @@ public class HomeController : Controller
 
                     AllPosts = idsActualizados.Select(id => postsActualizados.First(p => p.IdPost == id)).ToList();
                 }
-                else
-                {
-                    var index = int.Parse(Direction);
-                    var elementosAMover = AllPosts.Skip(index).ToList();
-                    AllPosts.RemoveRange(index, AllPosts.Count - index);
-                    AllPosts.AddRange(elementosAMover);
-
+                else if (Direction == "down")
+                {                    
+                    var primerElemento = AllPosts.First();
+                    AllPosts.RemoveAt(0);
+                    AllPosts.Add(primerElemento);
+                    
                     // Actualizar datos usando IDs
                     var idsActualizados = AllPosts.Select(p => p.IdPost).ToList();
                     var postsActualizados = _repoPost.SelectWhere(p => idsActualizados.Contains(p.IdPost))
@@ -92,6 +76,33 @@ public class HomeController : Controller
                         .ToList();
 
                     AllPosts = idsActualizados.Select(id => postsActualizados.First(p => p.IdPost == id)).ToList();
+                }
+                else
+                {
+                    var index = int.Parse(Direction);
+                    Console.WriteLine($"Índice parseado: {index}");
+                    
+                    var elementosAMover = AllPosts.Skip(index).ToList();
+                    Console.WriteLine($"Elementos a mover: {elementosAMover.Count}");
+                    
+                    AllPosts.RemoveRange(index, AllPosts.Count - index);
+                    Console.WriteLine($"Elementos eliminados desde el índice {index}");
+                    
+                    AllPosts.AddRange(elementosAMover);
+                    Console.WriteLine("Elementos agregados al final de la lista");
+
+                    // Actualizar datos usando IDs
+                    var idsActualizados = AllPosts.Select(p => p.IdPost).ToList();
+                    Console.WriteLine($"IDs actualizados: {string.Join(", ", idsActualizados)}");
+                    
+                    var postsActualizados = _repoPost.SelectWhere(p => idsActualizados.Contains(p.IdPost))
+                        .Include(p => p.Usuario)
+                        .Include(p => p.ListLikes)
+                        .ToList();
+                    Console.WriteLine($"Posts actualizados obtenidos: {postsActualizados.Count}");
+
+                    AllPosts = idsActualizados.Select(id => postsActualizados.First(p => p.IdPost == id)).ToList();
+                    Console.WriteLine("Lista final de posts reordenada");
                 }
             }
 
@@ -113,21 +124,14 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Perfil(uint? id)
     {
-        uint IdUsuario;
-        if(id == null)
-        {
-            IdUsuario = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-        }
-        else
-        {
-            IdUsuario = id.Value;
-        }
-        var usuario = _repoUsuario.IdSelect(IdUsuario);
+        var IdUsuario = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+
+        var usuario = _repoUsuario.IdSelect(id ?? IdUsuario);
         var postsUsuario = _repoPost.SelectWhere(p => p.IdUsuario == IdUsuario).Include(p => p.ListLikes).ToList();
 
         var viewModel = new PerfilViewModel
         {
-            EsUsuarioActual = (id == null),
+            EsUsuarioActual = (id == IdUsuario),
             Usuario = usuario,
             PostsUsuario = postsUsuario
         };
