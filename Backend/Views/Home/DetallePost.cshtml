@@ -3,29 +3,30 @@
 <div class="container mx-auto mt-8 px-4">
     <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
         <h1 class="text-4xl font-bold mb-6 text-gray-800 text-center">Detalle del Post</h1>
-        
-        <div class="mb-6">
-            <img src="~/images/@Model.Post.UrlImagen" alt="Imagen del post" class="w-full h-auto rounded-lg shadow-md">
-        </div>
-        
-        <div class="mb-6">
-            <p class="text-lg text-gray-700 leading-relaxed">@Model.Post.Contenido</p>
-        </div>
-        
-        <div class="mb-6">
-            <p class="text-sm text-gray-500">Publicado por: <span class="font-semibold text-gray-800">@Model.Usuario.NombreUsuario</span></p>
-            <p class="text-sm text-gray-500">Fecha: <span class="font-semibold text-gray-800">@Model.Post.FechaPublicacion.ToString("dd/MM/yyyy HH:mm")</span></p>
-        </div>
-        
-        <div class="flex items-center mb-6">
-            <form asp-controller="Home" asp-action="Perfil" asp-route-id="@Model.Post.IdUsuario" method="get">
-                <input type="image" title="@Model.Usuario.NombreUsuario"
-                       src="@("/images/" + (@Model.Usuario.FotoPerfil ?? "Imagenens-layout/svg/Usuario-Icono.svg"))"
-                       class="rounded-full w-16 h-16 object-cover cursor-pointer border-2 border-gray-300 hover:border-blue-500 transition duration-300" />
-            </form>
-            <div class="ml-4">
-                <p class="text-lg font-semibold text-gray-800">@Model.Usuario.NombreUsuario</p>
-                @* <p class="text-sm text-gray-500">Última actividad: @Model.Usuario.UltimaActividad.ToString("dd/MM/yyyy HH:mm")</p> *@
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <!-- Imagen del post -->
+            <div class="flex justify-center items-center">
+                <img src="~/images/@Model.Post.UrlImagen" alt="Imagen del post" class="h-64 object-cover rounded-lg shadow-md">
+            </div>
+
+            <!-- Detalles del post -->
+            <div class="flex flex-col justify-center p-4">
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">@Model.Post.Contenido</p>
+                <div class="mt-4">
+                    <p class="text-sm text-gray-500">Publicado por: <span class="font-semibold text-gray-800">@Model.Usuario.NombreUsuario</span></p>
+                    <p class="text-sm text-gray-500">Fecha: <span class="font-semibold text-gray-800">@Model.Post.FechaPublicacion.ToString("dd/MM/yyyy HH:mm")</span></p>
+                </div>
+                <div class="flex items-center mt-4">
+                    <form asp-controller="Home" asp-action="Perfil" asp-route-id="@Model.Post.IdUsuario" method="get">
+                        <input type="image" title="@Model.Usuario.NombreUsuario"
+                               src="@("~/images/" + (@Model.Usuario.FotoPerfil ?? "Imagenens-layout/svg/Usuario-Icono.svg"))"
+                               class="rounded-full w-12 h-12 object-cover cursor-pointer border-2 border-gray-300 hover:border-blue-500 transition duration-300" />
+                    </form>
+                    <div class="ml-4">
+                        <p class="text-lg font-semibold text-gray-800">@Model.Usuario.NombreUsuario</p>
+                    </div>
+                </div>
             </div>
         </div>
         

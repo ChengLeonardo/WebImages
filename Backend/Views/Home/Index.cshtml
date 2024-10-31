@@ -1,8 +1,11 @@
 @model IndexViewModel;
 @{
-
+    var i = 0;
+    if(Model.AllPosts.Count() != 0 || Model.AllPosts != null)
+    {
+        i = 1;
+    }
   var loopCantidad = Model.AllPosts.Count < 4 ? Model.AllPosts.Count : 4;
-  var post = Model.AllPosts[0];
 }
 
 <body class="transition-all duration-300 dark:bg-neutral-900 bg-gris h-screen w-full grid grid-rows-[10vh_90vh]">
@@ -52,7 +55,9 @@
         </nav>
     </header>
     <main class="flex justify-center items-center">
-
+        @for( i = i;i < 1; i++)
+        {
+            var post = Model.AllPosts[i];
         <section class="h-full w-3/5 grid grid-cols-[10%_70%_20%]">
             <div class="flex justify-center items-center flex-col">
                 <a asp-action="Index" asp-controller="Home" asp-route-Direction="up">
@@ -114,6 +119,7 @@
                         }
                   </a>
                   </div>
+
                   @for(int x = 0; x < (loopCantidad - 1); x++)
                   {
                     if (x + 1 < Model.AllPosts.Count)
@@ -127,5 +133,7 @@
                   }
               </div>
            </section>
+
+        }
     </main>
 </body>
