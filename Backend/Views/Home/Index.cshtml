@@ -2,7 +2,7 @@
 @{
 
   var loopCantidad = Model.AllPosts.Count < 3 ? Model.AllPosts.Count : 3;
-  
+  var post = Model.AllPosts[0];
 }
 
 <body class="transition-all duration-300 dark:bg-neutral-900 bg-gris h-screen w-full grid grid-rows-[10vh_90vh]">
@@ -53,57 +53,43 @@
     </header>
     <main class="flex justify-center items-center">
 
-      @for (int i = 0; i < loopCantidad; i++)
-      {
-          var post = Model.AllPosts[i];
+
         <section class="h-full w-3/5 grid grid-cols-[10%_70%_20%]">
             <div class="flex justify-center items-center flex-col">
-                <form method="post" asp-action="CambiarPost" asp-controller="Home">
-                    <input type="hidden" name="Direction" value="up" />
-                    @for (int j = 0; j < Model.AllPosts.Count; j++)
-                    {
-                        <input type="hidden" name="AllPosts[@j].IdPost" value="@Model.AllPosts[j].IdPost" />
-                        <input type="hidden" name="AllPosts[@j].Titulo" value="@Model.AllPosts[j].Titulo" />
-                        <input type="hidden" name="AllPosts[@j].Contenido" value="@Model.AllPosts[j].Contenido" />
-                        <input type="hidden" name="AllPosts[@j].UrlImagen" value="@Model.AllPosts[j].UrlImagen" />
-                        <input type="hidden" name="AllPosts[@j].FechaPublicacion" value="@Model.AllPosts[j].FechaPublicacion" />
-                        <input type="hidden" name="AllPosts[@j].IdUsuario" value="@Model.AllPosts[j].IdUsuario" />
-                        <input type="hidden" name="AllPosts[@j].Usuario.Nombre" value="@Model.AllPosts[j].Usuario.Nombre" />
-                        <input type="hidden" name="AllPosts[@j].Usuario.Apellido" value="@Model.AllPosts[j].Usuario.Apellido" />
-                        <input type="hidden" name="AllPosts[@j].Usuario.NombreUsuario" value="@Model.AllPosts[j].Usuario.NombreUsuario" />
-                        <input type="hidden" name="AllPosts[@j].Usuario.FotoPerfil" value="@Model.AllPosts[j].Usuario.FotoPerfil" />
-                    }
+                <a asp-action="Index" asp-controller="Home" asp-route-Direction="up">
                     <button type="submit">
                         <svg class="transition-all duration-300 cursor-pointer h-12 w-12 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"></path>
                         </svg>
                     </button>
-                </form>
-                <form method="post" asp-action="LikePost" asp-route-returnUrl="@Context.Request.Path" asp-controller="Home">
+                </a>
+                <form method="post" asp-action="LikePost" asp-route-returnUrl="@Context.Request.Path" asp-route-id="@post.IdPost" asp-controller="Home">
                       <input type="hidden" name="postId" asp-route-postId="@post.IdPost">
-                      <button type="submit">
-                          <svg class="transition-all duration-300 cursor-pointer h-8 w-8 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      @if(post.ListLikes.Any(l => l.IdUsuario != post.Usuario.IdUsuario))
+                      {                        
+                        <button type="submit">
+                            <svg class="transition-all duration-300 cursor-pointer h-8 bg-blue w-8  fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                               <path d="M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z"></path>
-                        </svg>
-                      </button>
-                </form>
-                <form method="post" asp-action="CambiarPost" asp-controller="Home">
-                    @for (int j = 0; j < Model.AllPosts.Count; j++)
-                    {
-                        <input type="hidden" name="AllPosts[@j].IdPost" value="@Model.AllPosts[j].IdPost" />
-                        <input type="hidden" name="AllPosts[@j].Titulo" value="@Model.AllPosts[j].Titulo" />
-                        <input type="hidden" name="AllPosts[@j].Contenido" value="@Model.AllPosts[j].Contenido" />
-                        <input type="hidden" name="AllPosts[@j].UrlImagen" value="@Model.AllPosts[j].UrlImagen" />
-                        <input type="hidden" name="AllPosts[@j].FechaPublicacion" value="@Model.AllPosts[j].FechaPublicacion" />
-                        <input type="hidden" name="AllPosts[@j].IdUsuario" value="@Model.AllPosts[j].IdUsuario" />
-                    }
-                      <input type="hidden" name="Direction" value="down">
+                            </svg>
+                        </button>
+  
+                      }
+                      else
+                      {
                       <button type="submit">
+                            <svg class="transition-all duration-300 cursor-pointer h-8 w-8 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                              <path d="M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z"></path>
+                            </svg>
+                        </button>
+                      }
+                </form>
+                <a asp-action="Index" asp-controller="Home" asp-route-Direction="down">
+                <button type="submit">
                           <svg class="transition-all duration-300 cursor-pointer h-12 w-12 fill-white hover:fill-azul dark:fill-neutral-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                               <path d="m18.707 12.707-1.414-1.414L13 15.586V6h-2v9.586l-4.293-4.293-1.414 1.414L12 19.414z"></path>
-                          </svg>    
-                      </button>
-                </form>
+                      </svg>    
+                </button>
+                </a>
             </div>
               <div class="flex justify-center items-center flex-col">
                   <h1 class="text-azul font-bold">@post.Titulo</h1>
@@ -139,7 +125,5 @@
                   }
               </div>
            </section>
-      } 
-
     </main>
 </body>

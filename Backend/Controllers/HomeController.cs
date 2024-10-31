@@ -17,6 +17,7 @@ public class HomeController : Controller
     private readonly IRepoRolUsuario _repoRolUsuario;
     private readonly IRepoPost _repoPost;
     private readonly IRepoUsuarioLikes _repoUsuarioLikes;
+    private static List<Post> AllPosts = new List<Post>();
     public HomeController(IRepoUsuario repoUsuario, IRepoRolUsuario repoRolUsuario, IWebHostEnvironment environment, IRepoPost repoPost, IRepoUsuarioLikes repoUsuarioLikes)
     {
         _environment = environment;
@@ -27,25 +28,74 @@ public class HomeController : Controller
     }
 
     [HttpGet]
-    public IActionResult Index(List<Post> allPosts)
+    public IActionResult Index(string? Direction)
     {
         if (User.Identity.IsAuthenticated)
         {
             // Recuperar AllPosts de TempData si está disponible
-            if (TempData["AllPosts"] != null)
+            if (Direction == null)
             {
-                allPosts = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Post>>(TempData["AllPosts"].ToString());
-            }
-            else if (allPosts == null || allPosts.Count == 0)
-            {
-                allPosts = _repoPost.Select().Include(p => p.Usuario).Include(p => p.ListLikes).ToList();
+                var posts = _repoPost.Select().Include(p => p.Usuario).Include(p => p.ListLikes).ToList();
+                AllPosts = posts.OrderBy(x => Random.Shared.Next()).ToList();
+
                 Console.WriteLine("No hay posts disponibles para mostrar, se cargan desde la base de datos.");
             }
-
-            var viewModel = new IndexViewModel
+            else
             {
-                AllPosts = allPosts.OrderBy(p => Guid.NewGuid()).ToList()
-            };
+                if(AllPosts.Count == 0 || AllPosts is null)
+                {
+                    var posts = _repoPost.Select().Include(p => p.Usuario).Include(p => p.ListLikes).ToList();
+                    AllPosts = posts.OrderBy(x => Random.Shared.Next()).ToList();
+                }
+                if (Direction == "up")
+                {
+                    var primerElemento = AllPosts.First();
+                    AllPosts.RemoveAt(0);
+                    AllPosts.Add(primerElemento);
+                    
+                    // Actualizar datos usando IDs
+                    var idsActualizados = AllPosts.Select(p => p.IdPost).ToList();
+                    var postsActualizados = _repoPost.SelectWhere(p => idsActualizados.Contains(p.IdPost))
+                        .Include(p => p.Usuario)
+                        .Include(p => p.ListLikes)
+                        .ToList();
+
+                    AllPosts = idsActualizados.Select(id => postsActualizados.First(p => p.IdPost == id)).ToList();
+                }
+                else if (Direction == "down")
+                {
+                    var ultimoElemento = AllPosts.Last();
+                    AllPosts.RemoveAt(AllPosts.Count - 1);
+                    AllPosts.Insert(0, ultimoElemento);
+
+                    // Actualizar datos usando IDs
+                    var idsActualizados = AllPosts.Select(p => p.IdPost).ToList();
+                    var postsActualizados = _repoPost.SelectWhere(p => idsActualizados.Contains(p.IdPost))
+                        .Include(p => p.Usuario)
+                        .Include(p => p.ListLikes)
+                        .ToList();
+
+                    AllPosts = idsActualizados.Select(id => postsActualizados.First(p => p.IdPost == id)).ToList();
+                }
+                else
+                {
+                    var index = int.Parse(Direction);
+                    var elementosAMover = AllPosts.Skip(index).ToList();
+                    AllPosts.RemoveRange(index, AllPosts.Count - index);
+                    AllPosts.AddRange(elementosAMover);
+
+                    // Actualizar datos usando IDs
+                    var idsActualizados = AllPosts.Select(p => p.IdPost).ToList();
+                    var postsActualizados = _repoPost.SelectWhere(p => idsActualizados.Contains(p.IdPost))
+                        .Include(p => p.Usuario)
+                        .Include(p => p.ListLikes)
+                        .ToList();
+
+                    AllPosts = idsActualizados.Select(id => postsActualizados.First(p => p.IdPost == id)).ToList();
+                }
+            }
+
+            var viewModel = new IndexViewModel { AllPosts = AllPosts };
             return View(viewModel);
         }
         else
@@ -188,12 +238,11 @@ public class HomeController : Controller
     {
         var userId = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
         var post = _repoPost.IdSelect(id);
-
         // Verificar si el usuario que realiza la acción es el mismo que creó el post
         if (post.IdUsuario == userId)
         {
-            // Si es el mismo usuario, no permitir la acción
-            return Redirect(returnUrl);
+
+            return Redirect(returnUrl + "?Direction=" + id);
         }
 
         var like = _repoUsuarioLikes.SelectWhere(l => l.IdUsuario == userId && l.IdPost == id).FirstOrDefault();
@@ -219,7 +268,7 @@ public class HomeController : Controller
         _repoPost.Update(post);
         
         // Usar la URL de retorno proporcionada
-        return Redirect(returnUrl);
+        return Redirect(returnUrl + "?Direction=" + id);
     }
 
 
@@ -266,35 +315,5 @@ public class HomeController : Controller
                 NombreUsuario = usuario.NombreUsuario
             };
             return View(model);
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> CambiarPost(IndexViewModel model)
-    {
-        if (model.AllPosts == null || model.AllPosts.Count == 0)
-        {
-            Console.WriteLine("No hay posts disponibles para cambiar.");
-            ModelState.AddModelError("", "No hay posts disponibles para cambiar.");
-            return RedirectToAction("Index", "Home");
-        }
-
-        if (model.Direction == "up")
-        {
-            var primerElemento = model.AllPosts[0];
-            model.AllPosts.RemoveAt(0);
-            model.AllPosts.Add(primerElemento);
-        }
-        else if (model.Direction == "down")
-        {
-            var ultimoElemento = model.AllPosts[model.AllPosts.Count - 1];
-            model.AllPosts.RemoveAt(model.AllPosts.Count - 1);
-            model.AllPosts.Insert(0, ultimoElemento);
-        }
-
-        // Almacenar el modelo actualizado en TempData
-        TempData["AllPosts"] = JsonConvert.SerializeObject(model.AllPosts);
-
-        // Redirigir a Index
-        return RedirectToAction(nameof(Index), "Home");
     }
 }
