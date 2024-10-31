@@ -79,28 +79,29 @@ public class HomeController : Controller
                 }
                 else
                 {
-                    var index = int.Parse(Direction);
-                    Console.WriteLine($"Índice parseado: {index}");
-                    
-                    var elementosAMover = AllPosts.Skip(index).ToList();
-                    Console.WriteLine($"Elementos a mover: {elementosAMover.Count}");
-                    
-                    AllPosts.RemoveRange(index, AllPosts.Count - index);
-                    Console.WriteLine($"Elementos eliminados desde el índice {index}");
-                    
-                    AllPosts.AddRange(elementosAMover);
-                    Console.WriteLine("Elementos agregados al final de la lista");
+                    var idPost = int.Parse(Direction);
+                    Console.WriteLine($"Índice parseado: {idPost}");
+
+                    var index = AllPosts.FindIndex(p => p.IdPost == idPost);
+                    // Dividir la lista en dos partes: desde el índice hasta el final y los elementos antes del índice
+                    var elementosDesdeIndex = AllPosts.Skip(index).ToList();      // Parte desde el índice al final
+                    var elementosAntesDeIndex = AllPosts.Take(index).ToList();     // Parte antes del índice
+
+                    // Concatenar: primero los elementos desde el índice, luego los elementos anteriores al índice
+                    AllPosts = elementosDesdeIndex.Concat(elementosAntesDeIndex).ToList();
+                    Console.WriteLine("Lista reordenada: " + string.Join(", ", AllPosts.Select(p => p.IdPost)));
 
                     // Actualizar datos usando IDs
                     var idsActualizados = AllPosts.Select(p => p.IdPost).ToList();
                     Console.WriteLine($"IDs actualizados: {string.Join(", ", idsActualizados)}");
-                    
+
                     var postsActualizados = _repoPost.SelectWhere(p => idsActualizados.Contains(p.IdPost))
                         .Include(p => p.Usuario)
                         .Include(p => p.ListLikes)
                         .ToList();
                     Console.WriteLine($"Posts actualizados obtenidos: {postsActualizados.Count}");
 
+                    // Reordenar AllPosts con los datos actualizados
                     AllPosts = idsActualizados.Select(id => postsActualizados.First(p => p.IdPost == id)).ToList();
                     Console.WriteLine("Lista final de posts reordenada");
                 }
@@ -127,11 +128,13 @@ public class HomeController : Controller
         var IdUsuario = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
 
         var usuario = _repoUsuario.IdSelect(id ?? IdUsuario);
-        var postsUsuario = _repoPost.SelectWhere(p => p.IdUsuario == IdUsuario).Include(p => p.ListLikes).ToList();
+        var postsUsuario = _repoPost.SelectWhere(p => p.IdUsuario == usuario.IdUsuario).Include(p => p.ListLikes).ToList();
+
+        var EsUsuarioActual = (id == null) || (id == IdUsuario);   
 
         var viewModel = new PerfilViewModel
         {
-            EsUsuarioActual = (id == IdUsuario),
+            EsUsuarioActual = EsUsuarioActual,
             Usuario = usuario,
             PostsUsuario = postsUsuario
         };
