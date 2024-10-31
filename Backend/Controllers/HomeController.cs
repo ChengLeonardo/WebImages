@@ -220,7 +220,7 @@ public class HomeController : Controller
                 IdUsuario = userId,
                 FechaPublicacion = DateTime.Now,
                 Titulo = model.Titulo,
-                Contenido = model.Descripcion
+                Descripcion = model.Descripcion
             };
 
             _repoPost.Insert(post, "IdPost"	);
@@ -301,6 +301,9 @@ public class HomeController : Controller
                         break;
                     case "NombreUsuario":
                         usuario.NombreUsuario = model.NombreUsuario;
+                        break;
+                    case "Descripcion":
+                        usuario.Descripcion = model.Descripcion;
                         break;
                 }
                 // Aquí puedes agregar la lógica para actualizar la foto de perfil si se proporciona

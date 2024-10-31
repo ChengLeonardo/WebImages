@@ -1065,6 +1065,10 @@ video {
   transition-duration: 150ms;
 }
 
+.top-4\/5{
+  top: 80%;
+} 
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -1154,6 +1158,10 @@ video {
 
 .dark\:border-none:where(.dark, .dark *) {
   border-style: none;
+}
+
+.dark\:text-white:where(.dark, .dark *) {
+  color: #ffff;
 }
 
 .dark\:bg-black:where(.dark, .dark *) {

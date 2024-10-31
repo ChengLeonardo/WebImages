@@ -70,6 +70,8 @@
                     <p>@Model.Usuario.Apellido</p>
                 </div>
                 <p class="transition-all duration-300 text-center dark:bg-neutral-700 placeholder-white mb-2 border-2 outline-none bg-gris border-none text-white w-72 rounded-lg h-8 pl-4">@Model.Usuario.Email</p>
+                <h2 class="text-azul">Descripcion:</h2>
+                <p>@Model.Usuario.Descripcion</p>
                 @if(Model.EsUsuarioActual)
                 {
                     <a asp-action="Configuracion" asp-controller="Home" class="hover:bg-azulOscuro hover:scale-110 duration-300 flex mt-2 justify-center rounded-3xl h-10 w-48 bg-azul font-medium text-lg py-2">Configuración</a>

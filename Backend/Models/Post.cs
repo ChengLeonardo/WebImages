@@ -12,14 +12,13 @@ public class Post
     public string UrlImagen { get; set; } // URL de la imagen
 
     public uint IdUsuario { get; set; }
-
+    [Required]
+    [StringLength(255)]
+    public string? Descripcion { get; set; }
     [Required]
     public List<UsuarioLikes> ListLikes { get; set; } = new List<UsuarioLikes>();
     [Required]
     public string Titulo { get; set; }
-    [Required]
-    [StringLength(100)]
-    public string Contenido { get; set; }
 
     [Required]
     public DateTime FechaPublicacion { get; set; }

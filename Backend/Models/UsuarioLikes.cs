@@ -14,4 +14,5 @@ public class UsuarioLikes
 
     [ForeignKey("IdPost")]
     public Post? Post { get; set; }
+    
 }

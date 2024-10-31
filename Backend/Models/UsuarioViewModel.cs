@@ -12,7 +12,6 @@ namespace BackEnd.Models;
         public string? Apellido { get; set; }
         
         public string? Email { get; set; }
-        
         public string? FotoPerfil { get; set; }
         public string Que { get; set; }
     }

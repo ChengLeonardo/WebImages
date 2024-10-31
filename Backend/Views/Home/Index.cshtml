@@ -97,7 +97,13 @@
             </div>
               <div class="flex h-full w-full justify-center items-center flex-col">
                   <h1 class="text-azul font-bold">@post.Titulo</h1>
-                  <img class="border-none rounded-3xl h-4/5 w-3/5 bg-white" src="~/images/@(post.UrlImagen)" alt="Imagen del post">
+                  <div class="h-4/5 w-3/5 relative">
+                    <img id="gradiante" class="h-full w-full border-none rounded-3xl bg-white" src="~/images/@(post.UrlImagen)" alt="Imagen del post">
+                    <div class="bg-neutral-600 mt-4 w-full h-auto rounded-xl">
+                        <p class="text-white">Descripcion:</p>
+                        <p class="text-azul">@post.Descripcion</p>
+                    </div>
+                  </div>
               </div>
               <div class="mt-16 font-bold text-xl text-azul flex justify-start items-center flex-col">
                   <div class="flex justify-center items-center">
