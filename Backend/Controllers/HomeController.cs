@@ -6,6 +6,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace BackEnd.Controllers;
 
@@ -30,7 +31,12 @@ public class HomeController : Controller
     {
         if (User.Identity.IsAuthenticated)
         {
-            if (allPosts == null || allPosts.Count == 0)
+            // Recuperar AllPosts de TempData si está disponible
+            if (TempData["AllPosts"] != null)
+            {
+                allPosts = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Post>>(TempData["AllPosts"].ToString());
+            }
+            else if (allPosts == null || allPosts.Count == 0)
             {
                 allPosts = _repoPost.Select().Include(p => p.Usuario).Include(p => p.ListLikes).ToList();
                 Console.WriteLine("No hay posts disponibles para mostrar, se cargan desde la base de datos.");
@@ -263,13 +269,13 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult CambiarPost(IndexViewModel model)
+    public async Task<IActionResult> CambiarPost(IndexViewModel model)
     {
         if (model.AllPosts == null || model.AllPosts.Count == 0)
         {
             Console.WriteLine("No hay posts disponibles para cambiar.");
             ModelState.AddModelError("", "No hay posts disponibles para cambiar.");
-            return RedirectToAction("Index", "Home", model);
+            return RedirectToAction("Index", "Home");
         }
 
         if (model.Direction == "up")
@@ -285,7 +291,10 @@ public class HomeController : Controller
             model.AllPosts.Insert(0, ultimoElemento);
         }
 
-        // Redirigir a Index y pasar el modelo actualizado
-        return RedirectToAction(nameof(Index), "Home", model.AllPosts);
+        // Almacenar el modelo actualizado en TempData
+        TempData["AllPosts"] = JsonConvert.SerializeObject(model.AllPosts);
+
+        // Redirigir a Index
+        return RedirectToAction(nameof(Index), "Home");
     }
 }
