@@ -108,7 +108,10 @@ public class HomeController : Controller
                 }
             }
 
+
             var viewModel = new IndexViewModel { AllPosts = AllPosts };
+            viewModel.IdUsuario = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            
             return View(viewModel);
         }
         else
@@ -126,6 +129,10 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Perfil(uint? id)
     {
+        if(!User.Identity.IsAuthenticated)
+        {
+            return RedirectToAction("Login", "Login");
+        }
         var IdUsuario = Convert.ToUInt16(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
 
         var usuario = _repoUsuario.IdSelect(id ?? IdUsuario);
@@ -249,7 +256,6 @@ public class HomeController : Controller
         // Verificar si el usuario que realiza la acción es el mismo que creó el post
         if (post.IdUsuario == userId)
         {
-
             return Redirect(returnUrl + "?Direction=" + id);
         }
 

@@ -1210,3 +1210,21 @@ video {
   fill: #737373;
 }
 
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.bg-cover {
+  background-size: cover;
+}
+.bg-center {
+  background-position: center;
+}
+
+.object-cover{
+  object-fit: cover;
+}
+
+.object-contain{
+  object-fit: contain;
+}

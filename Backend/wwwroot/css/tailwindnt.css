@@ -2,6 +2,7 @@
     position: relative;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
+    overflow: hidden;
 }
 
 #body ::after{
