@@ -82,7 +82,7 @@
         <div class="pt-4 transition-all duration-300 dark:bg-neutral-800 overflow-y-auto flex items-center px-8 flex-row justify-center flex-wrap h-11/12 w-11/12 bg-gris rounded-xl">
             @foreach (var post in Model.PostsUsuario)
             {
-                <a href="@Url.Action("DetallePost", "Home", new { id = post.IdPost })" class="block mx-4 mb-4 h-40 w-40 bg-white rounded-xl">
+                <a href="@Url.Action("Index", "Home", new { Direction = post.IdPost })" class="block mx-4 mb-4 h-40 w-40 bg-white rounded-xl">
                     <div class="h-full w-full relative">
                         <img src="@("/images/" + @post.UrlImagen)" alt="Post Image" class="h-full w-full object-cover rounded-xl">
                         <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-1 rounded-b-xl">

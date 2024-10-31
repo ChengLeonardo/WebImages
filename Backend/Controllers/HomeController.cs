@@ -83,6 +83,7 @@ public class HomeController : Controller
                     Console.WriteLine($"Índice parseado: {idPost}");
 
                     var index = AllPosts.FindIndex(p => p.IdPost == idPost);
+                    
                     // Dividir la lista en dos partes: desde el índice hasta el final y los elementos antes del índice
                     var elementosDesdeIndex = AllPosts.Skip(index).ToList();      // Parte desde el índice al final
                     var elementosAntesDeIndex = AllPosts.Take(index).ToList();     // Parte antes del índice
