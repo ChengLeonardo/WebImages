@@ -1198,3 +1198,25 @@ video {
 .dark\:hover\:fill-neutral-500:hover:where(.dark, .dark *) {
   fill: #737373;
 }
+
+/* Deshabilitar todas las transiciones cuando se tiene la clase no-transition */
+.no-transition * {
+    transition: none !important;
+}
+
+/* Aplicar transiciones solo cuando el usuario no prefiere movimiento reducido */
+@media (prefers-reduced-motion: no-preference) {
+    .duration-300 {
+        transition-duration: 300ms;
+    }
+    .duration-500 {
+        transition-duration: 500ms;
+    }
+}
+
+/* Deshabilitar transiciones cuando se prefiere movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
