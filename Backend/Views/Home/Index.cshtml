@@ -19,7 +19,7 @@
                     <circle class="duration-300 fill-grisOscuro group-hover:fill-Amarillo" cx="43.17" cy="6.04" r="3.63"/>
                 </svg>
             </a>        
-            <a asp-action="Perfil" asp-controller="Home">
+            <a asp-action="Perfil" asp-controller="Home" >
                 <svg class="ml-4 duration-300 hover:fill-Verde h-8 w-8 fill-gris" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.71 170.52">
                     <circle class="cls-1" cx="62.86" cy="40.81" r="37.31"/>
                     <path class="cls-1" d="M62.86,166.97s49.73,2.37,59.26-26.52c2.93-63.17-59.26-62.32-59.26-62.32,0,0-62.18-.84-59.26,62.32,9.52,28.89,59.26,26.52,59.26,26.52Z"/>
@@ -95,13 +95,13 @@
                 </button>
                 </a>
             </div>
-              <div class="flex justify-center items-center flex-col">
+              <div class="flex h-full w-full justify-center items-center flex-col">
                   <h1 class="text-azul font-bold">@post.Titulo</h1>
-                  <img class="border-none rounded-3xl h-4/5 w-4/5 bg-white" src="~/images/@(post.UrlImagen)" alt="Imagen del post">
+                  <img class="border-none rounded-3xl h-4/5 w-3/5 bg-white" src="~/images/@(post.UrlImagen)" alt="Imagen del post">
               </div>
               <div class="mt-16 font-bold text-xl text-azul flex justify-start items-center flex-col">
                   <div class="flex justify-center items-center">
-                  <a asp-action="Perfil" asp-controller="Home" asp-route-id="@post.Usuario.IdUsuario">
+                  <a class="flex justify-center items-center" asp-action="Perfil" asp-controller="Home" asp-route-id="@post.Usuario.IdUsuario">
                         @if(string.IsNullOrEmpty(post.Usuario.FotoPerfil))
                         {
                           <div class="transition-all duration-300 dark:bg-neutral-700 h-24 w-24 rounded-full m-2 bg-white flex justify-center items items-center">
@@ -110,11 +110,12 @@
                                   <path class="cls-1" d="M62.86,166.97s49.73,2.37,59.26-26.52c2.93-63.17-59.26-62.32-59.26-62.32,0,0-62.18-.84-59.26,62.32,9.52,28.89,59.26,26.52,59.26,26.52Z"/>
                               </svg>
                           </div>
+                          <p class="text-azul">@post.Usuario.NombreUsuario</p>
                         }
                         else
                         {
                           <img class="ml-4 mr-4 bg-white h-24 w-24 rounded-full" src="~/images/@(post.Usuario.FotoPerfil)">
-                          <p>@post.Usuario.NombreUsuario</p>
+                          <p class="text-azul">@post.Usuario.NombreUsuario</p>
                         }
                   </a>
                   </div>
@@ -123,12 +124,11 @@
                   {
                     if (x + 1 < Model.AllPosts.Count)
                     {
-                        <a asp-action="Index" asp-controller="Home" asp-route-Direction="@(Model.AllPosts[x + 1].IdPost)">
                         <div class="flex justify-center items-center">
-                            <img class="mt-4 bg-white h-24 w-24 rounded-2xl" src="~/images/@Model.AllPosts[x + 1].UrlImagen" alt="Post aleatorio">
-                            <p class="ml-8">@Model.AllPosts[x + 1].Titulo</p>
-                        </div>
-                        </a>
+                            <a asp-action="Index" asp-controller="Home" asp-route-Direction="@(x + 1)">
+                                <img class="mt-4 bg-white h-24 w-24 rounded-2xl" src="~/images/@Model.AllPosts[x + 1].UrlImagen" alt="Post aleatorio">
+                            </a>
+                       </div>
                     }
                   }
               </div>
